@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F72E23F16362007BE84D /* AppDelegate.swift */; };
 		EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F73023F16362007BE84D /* SceneDelegate.swift */; };
-		EF71F73323F16362007BE84D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F73223F16362007BE84D /* ViewController.swift */; };
+		EF71F73323F16362007BE84D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F73223F16362007BE84D /* MainVC.swift */; };
 		EF71F73623F16362007BE84D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF71F73423F16362007BE84D /* Main.storyboard */; };
 		EF71F73823F16368007BE84D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF71F73723F16368007BE84D /* Assets.xcassets */; };
 		EF71F73B23F16368007BE84D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF71F73923F16368007BE84D /* LaunchScreen.storyboard */; };
+		EF71F74D23F1797B007BE84D /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F74C23F1797B007BE84D /* MainInteractor.swift */; };
+		EF71F74F23F17D2F007BE84D /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */; };
+		EF71F75123F18011007BE84D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F75023F18011007BE84D /* MainView.swift */; };
+		EF71F75523F1A927007BE84D /* Sukar-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF71F75423F1A926007BE84D /* Sukar-Regular.ttf */; };
+		EF71F75723F1AA83007BE84D /* Sukar-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF71F72B23F16362007BE84D /* Cool Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cool Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF71F72E23F16362007BE84D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF71F73023F16362007BE84D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF71F73223F16362007BE84D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF71F73223F16362007BE84D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		EF71F73523F16362007BE84D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF71F73723F16368007BE84D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF71F73A23F16368007BE84D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF71F73C23F16368007BE84D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF71F74C23F1797B007BE84D /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
+		EF71F75023F18011007BE84D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EF71F75423F1A926007BE84D /* Sukar-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sukar-Regular.ttf"; path = "../../../../../Downloads/Sukar-Regular.ttf"; sourceTree = "<group>"; };
+		EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sukar-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,108 @@
 		EF71F72D23F16362007BE84D /* Cool Kids */ = {
 			isa = PBXGroup;
 			children = (
-				EF71F72E23F16362007BE84D /* AppDelegate.swift */,
-				EF71F73023F16362007BE84D /* SceneDelegate.swift */,
-				EF71F73223F16362007BE84D /* ViewController.swift */,
-				EF71F73423F16362007BE84D /* Main.storyboard */,
-				EF71F73723F16368007BE84D /* Assets.xcassets */,
-				EF71F73923F16368007BE84D /* LaunchScreen.storyboard */,
-				EF71F73C23F16368007BE84D /* Info.plist */,
+				EF71F74423F16BDF007BE84D /* Core */,
+				EF71F74223F16BC6007BE84D /* Scenes */,
+				EF71F74723F16C29007BE84D /* Storyboards */,
+				EF71F74623F16C1E007BE84D /* Configs */,
+				EF71F74523F16BF0007BE84D /* Resources */,
 			);
 			path = "Cool Kids";
+			sourceTree = "<group>";
+		};
+		EF71F74223F16BC6007BE84D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F74323F16BD1007BE84D /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EF71F74323F16BD1007BE84D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F74B23F1767E007BE84D /* Interactors */,
+				EF71F74A23F17653007BE84D /* Presenters */,
+				EF71F74923F17641007BE84D /* Veiws */,
+				EF71F74823F17631007BE84D /* Conrtrollers */,
+				EF71F73223F16362007BE84D /* MainVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EF71F74423F16BDF007BE84D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F72E23F16362007BE84D /* AppDelegate.swift */,
+				EF71F73023F16362007BE84D /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EF71F74523F16BF0007BE84D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F75223F1A7AE007BE84D /* Fonts */,
+				EF71F73723F16368007BE84D /* Assets.xcassets */,
+				EF71F73923F16368007BE84D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF71F74623F16C1E007BE84D /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F73C23F16368007BE84D /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		EF71F74723F16C29007BE84D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F73423F16362007BE84D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EF71F74823F17631007BE84D /* Conrtrollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Conrtrollers;
+			sourceTree = "<group>";
+		};
+		EF71F74923F17641007BE84D /* Veiws */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F75023F18011007BE84D /* MainView.swift */,
+			);
+			path = Veiws;
+			sourceTree = "<group>";
+		};
+		EF71F74A23F17653007BE84D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		EF71F74B23F1767E007BE84D /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F74C23F1797B007BE84D /* MainInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		EF71F75223F1A7AE007BE84D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF71F75423F1A926007BE84D /* Sukar-Regular.ttf */,
+				EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +228,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF71F75723F1AA83007BE84D /* Sukar-Bold.ttf in Resources */,
 				EF71F73B23F16368007BE84D /* LaunchScreen.storyboard in Resources */,
+				EF71F75523F1A927007BE84D /* Sukar-Regular.ttf in Resources */,
 				EF71F73823F16368007BE84D /* Assets.xcassets in Resources */,
 				EF71F73623F16362007BE84D /* Main.storyboard in Resources */,
 			);
@@ -138,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF71F73323F16362007BE84D /* ViewController.swift in Sources */,
+				EF71F73323F16362007BE84D /* MainVC.swift in Sources */,
+				EF71F75123F18011007BE84D /* MainView.swift in Sources */,
 				EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */,
 				EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */,
+				EF71F74F23F17D2F007BE84D /* MainVCPresenter.swift in Sources */,
+				EF71F74D23F1797B007BE84D /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +394,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 874WHJ22Z3;
-				INFOPLIST_FILE = "Cool Kids/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Cool Kids/Configs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.ioslam.Cool-Kids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +413,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 874WHJ22Z3;
-				INFOPLIST_FILE = "Cool Kids/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Cool Kids/Configs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.ioslam.Cool-Kids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
