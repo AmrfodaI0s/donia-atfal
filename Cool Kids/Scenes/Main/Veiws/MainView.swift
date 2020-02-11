@@ -14,5 +14,5 @@ protocol MainView: class {
     func hideIndictor()
     func fetchDataSucceffully()
     func displayError()
-    
+    func goToVC()
 }

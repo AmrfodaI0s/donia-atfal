@@ -10,6 +10,9 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    @IBAction func startBtnTapped(_ sender: UIButton) {
+        goToVC()
+    }
     var presenter: MainVCPresenter!
     
     override func viewDidLoad() {
@@ -21,6 +24,13 @@ class MainVC: UIViewController {
 }
 
 extension MainVC: MainView {
+    func goToVC() {
+        let SB = UIStoryboard(name: "Main", bundle: nil)
+        let VC = SB.instantiateViewController(withIdentifier: "discoveryBar")
+        VC.modalPresentationStyle = .fullScreen
+        self.present(VC, animated: true)
+    }
+    
     func showIndictor() {
         
     }
