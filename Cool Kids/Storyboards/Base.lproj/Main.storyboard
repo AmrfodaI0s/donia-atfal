@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,15 +17,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7YQ-GA-o28">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsy-yS-w2t">
-                                <rect key="frame" x="90" y="585" width="195" height="50"/>
+                                <rect key="frame" x="90" y="780" width="234" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lOb-xQ-IyW"/>
@@ -45,7 +44,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أول تطبيق لمشاهدة أفلام الكرتون" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRr-X5-LZX">
-                                <rect key="frame" x="65.5" y="228" width="244" height="91"/>
+                                <rect key="frame" x="85" y="342.66666666666669" width="244" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="244" id="jjU-ov-nyQ"/>
                                     <constraint firstAttribute="height" constant="91" id="qKb-If-mJS"/>
@@ -58,9 +57,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7YQ-GA-o28" secondAttribute="trailing" id="1dX-Co-TM6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hsy-yS-w2t" secondAttribute="trailing" constant="90" id="3zm-2L-noP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hsy-yS-w2t" secondAttribute="trailing" priority="700" constant="90" id="3zm-2L-noP"/>
                             <constraint firstItem="7YQ-GA-o28" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4NG-MF-bWf"/>
-                            <constraint firstItem="hsy-yS-w2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="IHv-Co-sxE"/>
                             <constraint firstItem="KRr-X5-LZX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="Pd9-gU-xhE"/>
                             <constraint firstItem="hsy-yS-w2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Y7J-b8-CGr"/>
                             <constraint firstItem="hsy-yS-w2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="axc-1F-R37"/>
@@ -76,17 +74,19 @@
             </objects>
             <point key="canvasLocation" x="-561" y="130"/>
         </scene>
-        <!--Item 2-->
+        <!--FavoriteVC-->
         <scene sceneID="KPQ-5u-iVf">
             <objects>
-                <viewController id="vGe-ND-LvQ" sceneMemberID="viewController">
+                <viewController id="vGe-ND-LvQ" customClass="FavoriteVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCN-ON-qBi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZK5-tk-KQ8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="nwF-Y1-Vpr"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons850" selectedImage="icons851" id="nwF-Y1-Vpr">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdK-Ou-1e2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,11 +97,11 @@
             <objects>
                 <viewController storyboardIdentifier="superVC" id="fDL-1V-TwM" customClass="SuperCV" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8L9-Yx-7fQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85A-te-2d6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -114,28 +114,41 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OkW-r4-zc8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tv" catalog="system" selectedImage="tv.fill" id="Lvb-En-MoV">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
-                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8" id="Lvb-En-MoV">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lt1-6v-cwT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1089" y="-915"/>
         </scene>
-        <!--Item 1-->
+        <!--SettingsVC-->
         <scene sceneID="Nhx-HA-ffG">
             <objects>
-                <viewController id="d1e-GI-VWY" sceneMemberID="viewController">
+                <viewController id="d1e-GI-VWY" customClass="SettingsVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AUS-ed-LwH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m72-gt-oAy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="f7a-lB-zeg" firstAttribute="trailing" secondItem="m72-gt-oAy" secondAttribute="trailing" id="MSf-Mt-ZMv"/>
+                            <constraint firstItem="m72-gt-oAy" firstAttribute="leading" secondItem="AUS-ed-LwH" secondAttribute="leading" id="QFb-ZK-aWI"/>
+                            <constraint firstAttribute="bottom" secondItem="m72-gt-oAy" secondAttribute="bottom" id="YMM-Dc-Ng5"/>
+                            <constraint firstItem="m72-gt-oAy" firstAttribute="top" secondItem="AUS-ed-LwH" secondAttribute="top" id="jpB-T7-acI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="f7a-lB-zeg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="O3K-3A-VdD"/>
+                    <tabBarItem key="tabBarItem" title="" image="iconsbrake" selectedImage="iconsbrake2" id="O3K-3A-VdD">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbi-Fg-KKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +175,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tv" catalog="system" width="64" height="46"/>
-        <image name="tv.fill" catalog="system" width="64" height="46"/>
+        <image name="icons8" width="25" height="25"/>
+        <image name="icons850" width="25" height="25"/>
+        <image name="icons851" width="25" height="25"/>
+        <image name="iconsbrake" width="25" height="25"/>
+        <image name="iconsbrake2" width="25" height="25"/>
     </resources>
 </document>

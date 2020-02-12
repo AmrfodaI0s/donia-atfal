@@ -19,6 +19,8 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         presenter = MainVCPresenter(view: self)
         presenter.veiwDidLoad()
+        let frame_height = (self.view.frame.size.height)
+        saveUserDefaults(height: frame_height)
     }
 
 }
@@ -29,6 +31,11 @@ extension MainVC: MainView {
         let VC = SB.instantiateViewController(withIdentifier: "discoveryBar")
         VC.modalPresentationStyle = .fullScreen
         self.present(VC, animated: true)
+    }
+    func saveUserDefaults(height : CGFloat) {
+        let userDefault = UserDefaults.standard
+        userDefault.set(height, forKey: "frameHeight")
+        userDefault.synchronize()
     }
     
     func showIndictor() {

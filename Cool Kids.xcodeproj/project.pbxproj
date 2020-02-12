@@ -20,6 +20,8 @@
 		EF71F74F23F17D2F007BE84D /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */; };
 		EF71F75123F18011007BE84D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F75023F18011007BE84D /* MainView.swift */; };
 		EF71F75723F1AA83007BE84D /* Sukar-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */; };
+		EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5F54A23F423B300E08C56 /* FavoriteVC.swift */; };
+		EFD5F55023F4267F00E08C56 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5F54F23F4267F00E08C56 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
 		EF71F75023F18011007BE84D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sukar-Bold.ttf"; sourceTree = "<group>"; };
+		EFD5F54A23F423B300E08C56 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		EFD5F54F23F4267F00E08C56 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				EF71F74323F16BD1007BE84D /* Main */,
 				AAE4027B23F3563600489F84 /* TabBarVC.swift */,
 				AAE4027723F34A3500489F84 /* Super */,
+				EFD5F54823F4236600E08C56 /* Favorite */,
+				EFD5F54C23F4260E00E08C56 /* Settings */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -192,6 +198,38 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		EFD5F54823F4236600E08C56 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				EFD5F54923F4238600E08C56 /* Controller */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		EFD5F54923F4238600E08C56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFD5F54A23F423B300E08C56 /* FavoriteVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EFD5F54C23F4260E00E08C56 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EFD5F54D23F4265C00E08C56 /* Controllers */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EFD5F54D23F4265C00E08C56 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFD5F54F23F4267F00E08C56 /* SettingsVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF71F73323F16362007BE84D /* MainVC.swift in Sources */,
+				EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */,
 				EF71F75123F18011007BE84D /* MainView.swift in Sources */,
 				EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */,
 				EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */,
@@ -273,6 +312,7 @@
 				EF71F74F23F17D2F007BE84D /* MainVCPresenter.swift in Sources */,
 				AAE4027C23F3563600489F84 /* TabBarVC.swift in Sources */,
 				EF71F74D23F1797B007BE84D /* MainInteractor.swift in Sources */,
+				EFD5F55023F4267F00E08C56 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

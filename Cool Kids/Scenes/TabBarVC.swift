@@ -21,6 +21,7 @@ class TabBarVC: UITabBarController {
         self.tabBar.layer.masksToBounds = true
         self.tabBar.isTranslucent = true
         self.tabBar.barStyle = .black
+      
     }
   
     
@@ -29,7 +30,15 @@ extension UITabBar {
     override public func sizeThatFits(_ size: CGSize) -> CGSize {
         super.sizeThatFits(size)
         var sizeThatFits = super.sizeThatFits(size)
-        sizeThatFits.height = 64
+        let fHeight = UserDefaults.standard.object(forKey: "frameHeight") as! Int
+        if fHeight > 750 {
+            sizeThatFits.height = 88
+        } else {
+            sizeThatFits.height = 64
+            print(self.layer.frame.size.height)
+            print("sssssss")
+        }
+        
         return sizeThatFits
     }
 }

@@ -1,18 +1,17 @@
 //
-//  SuperCV.swift
+//  FavoriteVC.swift
 //  Cool Kids
 //
-//  Created by Eslam on 2/11/20.
+//  Created by lodex solutions on 2/12/20.
 //  Copyright © 2020 ioslam. All rights reserved.
 //
 
 import UIKit
 
-class SuperCV: UIViewController {
-
+class FavoriteVC: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -20,6 +19,7 @@ class SuperCV: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "الرئيسية"
+        self.title = "المفضلة"
     }
+    
 }
