@@ -10,6 +10,7 @@ import UIKit
 
 class SuperCV: UIViewController {
 
+    @IBOutlet weak var slider_collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,4 +23,15 @@ class SuperCV: UIViewController {
         super.viewWillAppear(animated)
         self.title = "الرئيسية"
     }
+}
+extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    
 }

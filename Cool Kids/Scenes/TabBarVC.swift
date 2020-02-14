@@ -14,8 +14,9 @@ class TabBarVC: UITabBarController {
         super.viewDidLoad()
         self.tabBar.frame.size.height = 64
         self.selectedIndex = 2
-        self.tabBar.tintColor = .lightGray
-        self.tabBar.barTintColor = UIColor(red:0.21, green:0.23, blue:0.31, alpha:1.0)
+        self.tabBarItem.badgeColor = UIColor(red:104, green:200, blue:221, alpha:1.0)
+        //self.tabBar.tintColor = .lightGray
+        //self.tabBar.barTintColor = UIColor(red:0.21, green:0.23, blue:0.31, alpha:1.0)
         self.tabBar.layer.cornerRadius = 20
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.tabBar.layer.masksToBounds = true
@@ -23,7 +24,6 @@ class TabBarVC: UITabBarController {
         self.tabBar.barStyle = .black
       
     }
-  
     
 }
 extension UITabBar {
@@ -36,7 +36,6 @@ extension UITabBar {
         } else {
             sizeThatFits.height = 64
             print(self.layer.frame.size.height)
-            print("sssssss")
         }
         
         return sizeThatFits
