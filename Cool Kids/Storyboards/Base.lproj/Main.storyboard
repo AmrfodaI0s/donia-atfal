@@ -44,9 +44,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أول تطبيق لمشاهدة أفلام الكرتون" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRr-X5-LZX">
-                                <rect key="frame" x="-16.5" y="228" width="408" height="91"/>
+                                <rect key="frame" x="62.5" y="228" width="250" height="91"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="244" id="jjU-ov-nyQ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="jjU-ov-nyQ"/>
                                     <constraint firstAttribute="height" constant="91" id="qKb-If-mJS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="28"/>
@@ -104,8 +104,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85A-te-2d6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-Yp-tWx">
+                                        <rect key="frame" x="24" y="100" width="327" height="156"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="156" id="Cma-3w-hrS"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="8" sectionInsetReference="safeArea" id="JmR-JN-1q1">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" defersCurrentPageDisplay="YES" numberOfPages="6" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="BOk-U4-BGK">
+                                        <rect key="frame" x="151.5" y="240" width="72" height="8"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="gvi-op-6tO"/>
+                                            <constraint firstAttribute="height" constant="8" id="yIr-86-ZMP"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" red="0.17213910818099976" green="0.19474849104881287" blue="0.26685604453086853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pageControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HI-Qa-rJ1" userLabel="search view">
-                                        <rect key="frame" x="24" y="32" width="327" height="56"/>
+                                        <rect key="frame" x="24" y="36" width="327" height="56"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ابحث عن" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqo-0L-WkK">
                                                 <rect key="frame" x="217" y="16.5" width="62" height="23"/>
@@ -137,34 +166,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-Yp-tWx">
-                                        <rect key="frame" x="24" y="100" width="327" height="156"/>
-                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="156" id="Cma-3w-hrS"/>
-                                        </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JmR-JN-1q1">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </collectionView>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="6" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="BOk-U4-BGK">
-                                        <rect key="frame" x="151.5" y="240" width="72" height="8"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="72" id="gvi-op-6tO"/>
-                                            <constraint firstAttribute="height" constant="8" id="yIr-86-ZMP"/>
-                                        </constraints>
-                                        <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="currentPageIndicatorTintColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -173,7 +174,7 @@
                                     <constraint firstAttribute="trailing" secondItem="7EI-Yp-tWx" secondAttribute="trailing" constant="24" id="d7h-5r-roE"/>
                                     <constraint firstItem="BOk-U4-BGK" firstAttribute="centerX" secondItem="85A-te-2d6" secondAttribute="centerX" id="eJP-Jz-BMJ"/>
                                     <constraint firstItem="7EI-Yp-tWx" firstAttribute="leading" secondItem="85A-te-2d6" secondAttribute="leading" constant="24" id="ePF-oh-0We"/>
-                                    <constraint firstItem="7HI-Qa-rJ1" firstAttribute="top" secondItem="85A-te-2d6" secondAttribute="top" constant="32" id="kkg-bV-bsY"/>
+                                    <constraint firstItem="7HI-Qa-rJ1" firstAttribute="top" secondItem="85A-te-2d6" secondAttribute="top" constant="36" id="kkg-bV-bsY"/>
                                     <constraint firstAttribute="trailing" secondItem="7HI-Qa-rJ1" secondAttribute="trailing" constant="24" id="mlw-ko-0bB"/>
                                     <constraint firstItem="7HI-Qa-rJ1" firstAttribute="leading" secondItem="85A-te-2d6" secondAttribute="leading" constant="24" id="yuj-Jz-JKU"/>
                                 </constraints>
@@ -194,6 +195,8 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="pageController" destination="BOk-U4-BGK" id="8qC-L8-oRw"/>
+                        <outlet property="sliderCollectionView" destination="7EI-Yp-tWx" id="3ja-WK-Bo5"/>
                         <outlet property="slider_collectionView" destination="7EI-Yp-tWx" id="Vtn-o7-1Vd"/>
                     </connections>
                 </viewController>

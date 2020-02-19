@@ -12,9 +12,12 @@ class TabBarVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appearance = UITabBarItem.appearance()
+        let attributes = [NSAttributedString.Key.font:UIFont(name: "sukar-bold", size: 14)]
+        appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: [.normal])
         self.tabBar.frame.size.height = 64
         self.selectedIndex = 2
-        self.tabBarItem.badgeColor = UIColor(red:104, green:200, blue:221, alpha:1.0)
+        self.tabBarItem.badgeColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         //self.tabBar.tintColor = .lightGray
         //self.tabBar.barTintColor = UIColor(red:0.21, green:0.23, blue:0.31, alpha:1.0)
         self.tabBar.layer.cornerRadius = 20
