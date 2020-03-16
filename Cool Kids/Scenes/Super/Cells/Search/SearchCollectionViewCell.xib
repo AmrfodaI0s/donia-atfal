@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sukar-Bold.ttf">
+            <string>Sukar-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="gTV-IL-0wX" customClass="SearchCollectionViewCell" customModule="Cool_Kids" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="436" height="81"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfc-sV-TkJ">
+                        <rect key="frame" x="24" y="0.0" width="388" height="81"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_white" translatesAutoresizingMaskIntoConstraints="NO" id="kpJ-mo-kiQ">
+                                <rect key="frame" x="348" y="28.5" width="24" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="KPO-df-9XF"/>
+                                    <constraint firstAttribute="height" constant="24" id="cDy-D4-Xjt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ابحث عن" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrx-iy-MDi">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="81"/>
+                                <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kpJ-mo-kiQ" firstAttribute="centerY" secondItem="Cfc-sV-TkJ" secondAttribute="centerY" id="7wn-Mq-6PY"/>
+                            <constraint firstItem="kpJ-mo-kiQ" firstAttribute="leading" secondItem="nrx-iy-MDi" secondAttribute="trailing" constant="8" id="QHZ-TH-Jho"/>
+                            <constraint firstItem="nrx-iy-MDi" firstAttribute="leading" secondItem="Cfc-sV-TkJ" secondAttribute="leading" id="X8Z-lk-FFh"/>
+                            <constraint firstAttribute="bottom" secondItem="nrx-iy-MDi" secondAttribute="bottom" id="jr4-4G-1Hj"/>
+                            <constraint firstItem="nrx-iy-MDi" firstAttribute="centerY" secondItem="kpJ-mo-kiQ" secondAttribute="centerY" id="kjy-yn-8kh"/>
+                            <constraint firstAttribute="trailing" secondItem="kpJ-mo-kiQ" secondAttribute="trailing" constant="16" id="qfU-by-mhe"/>
+                            <constraint firstItem="nrx-iy-MDi" firstAttribute="top" secondItem="Cfc-sV-TkJ" secondAttribute="top" id="t4x-Pu-IqW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cfc-sV-TkJ" secondAttribute="bottom" id="6oT-gh-bfa"/>
+                <constraint firstAttribute="trailing" secondItem="Cfc-sV-TkJ" secondAttribute="trailing" constant="24" id="LOq-UW-ZCf"/>
+                <constraint firstItem="Cfc-sV-TkJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="UhN-Q1-N0r"/>
+                <constraint firstItem="Cfc-sV-TkJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kgu-3l-uuS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="436" height="81"/>
+            <point key="canvasLocation" x="188.40579710144928" y="156.36160714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="search_white" width="24" height="24"/>
+    </resources>
+</document>

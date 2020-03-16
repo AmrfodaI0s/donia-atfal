@@ -13,19 +13,15 @@ class MainVC: UIViewController {
     @IBAction func startBtnTapped(_ sender: UIButton) {
         goToVC()
     }
-    var presenter: MainVCPresenter!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = MainVCPresenter(view: self)
-        presenter.veiwDidLoad()
         let frame_height = (self.view.frame.size.height)
         saveUserDefaults(height: frame_height)
     }
 
 }
 
-extension MainVC: MainView {
+extension MainVC {
     func goToVC() {
         let SB = UIStoryboard(name: "Main", bundle: nil)
         let VC = SB.instantiateViewController(withIdentifier: "discoveryBar")
@@ -38,21 +34,5 @@ extension MainVC: MainView {
         userDefault.synchronize()
     }
     
-    func showIndictor() {
         
-    }
-    
-    func hideIndictor() {
-        
-    }
-    
-    func fetchDataSucceffully() {
-        
-    }
-    
-    func displayError() {
-        
-    }
-    
-    
 }

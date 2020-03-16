@@ -19,10 +19,13 @@
 		EF71F73623F16362007BE84D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF71F73423F16362007BE84D /* Main.storyboard */; };
 		EF71F73823F16368007BE84D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF71F73723F16368007BE84D /* Assets.xcassets */; };
 		EF71F73B23F16368007BE84D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF71F73923F16368007BE84D /* LaunchScreen.storyboard */; };
-		EF71F74D23F1797B007BE84D /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F74C23F1797B007BE84D /* MainInteractor.swift */; };
-		EF71F74F23F17D2F007BE84D /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */; };
-		EF71F75123F18011007BE84D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F75023F18011007BE84D /* MainView.swift */; };
 		EF71F75723F1AA83007BE84D /* Sukar-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */; };
+		EFB6340F241F830800E04818 /* SuperVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB6340E241F830800E04818 /* SuperVC.storyboard */; };
+		EFB63416241F854700E04818 /* FavoriteVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB63415241F854700E04818 /* FavoriteVC.storyboard */; };
+		EFB63418241F85F000E04818 /* SettingsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB63417241F85F000E04818 /* SettingsVC.storyboard */; };
+		EFB6341A241FA77300E04818 /* SuperVC + Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB63419241FA77300E04818 /* SuperVC + Collection.swift */; };
+		EFB6341D241FB7EF00E04818 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6341B241FB7EF00E04818 /* SearchCollectionViewCell.swift */; };
+		EFB6341E241FB7EF00E04818 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB6341C241FB7EF00E04818 /* SearchCollectionViewCell.xib */; };
 		EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5F54A23F423B300E08C56 /* FavoriteVC.swift */; };
 		EFD5F55023F4267F00E08C56 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5F54F23F4267F00E08C56 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
@@ -42,10 +45,13 @@
 		EF71F73723F16368007BE84D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF71F73A23F16368007BE84D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF71F73C23F16368007BE84D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF71F74C23F1797B007BE84D /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
-		EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
-		EF71F75023F18011007BE84D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sukar-Bold.ttf"; sourceTree = "<group>"; };
+		EFB6340E241F830800E04818 /* SuperVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuperVC.storyboard; sourceTree = "<group>"; };
+		EFB63415241F854700E04818 /* FavoriteVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteVC.storyboard; sourceTree = "<group>"; };
+		EFB63417241F85F000E04818 /* SettingsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsVC.storyboard; sourceTree = "<group>"; };
+		EFB63419241FA77300E04818 /* SuperVC + Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuperVC + Collection.swift"; sourceTree = "<group>"; };
+		EFB6341B241FB7EF00E04818 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFB6341C241FB7EF00E04818 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFD5F54A23F423B300E08C56 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		EFD5F54F23F4267F00E08C56 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,8 +70,8 @@
 		AAE4027723F34A3500489F84 /* Super */ = {
 			isa = PBXGroup;
 			children = (
-				EF0F464023FD415900B00A2B /* Cells */,
 				AAE4027823F34AB800489F84 /* Controllers */,
+				EF0F464023FD415900B00A2B /* Cells */,
 			);
 			path = Super;
 			sourceTree = "<group>";
@@ -74,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				AAE4027923F34AEA00489F84 /* SuperCV.swift */,
+				EFB63419241FA77300E04818 /* SuperVC + Collection.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -81,8 +88,8 @@
 		EF0F464023FD415900B00A2B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				EF0F464123FD419100B00A2B /* SliderCollectionViewCell.swift */,
-				EF0F464223FD419100B00A2B /* SliderCollectionViewCell.xib */,
+				EFB63420241FB80900E04818 /* Slider */,
+				EFB6341F241FB7FE00E04818 /* Search */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -119,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				EF71F74323F16BD1007BE84D /* Main */,
-				AAE4027B23F3563600489F84 /* TabBarVC.swift */,
 				AAE4027723F34A3500489F84 /* Super */,
 				EFD5F54823F4236600E08C56 /* Favorite */,
 				EFD5F54C23F4260E00E08C56 /* Settings */,
@@ -130,10 +136,8 @@
 		EF71F74323F16BD1007BE84D /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EF71F74B23F1767E007BE84D /* Interactors */,
-				EF71F74A23F17653007BE84D /* Presenters */,
-				EF71F74923F17641007BE84D /* Veiws */,
-				EF71F74823F17631007BE84D /* Conrtrollers */,
+				EF71F73223F16362007BE84D /* MainVC.swift */,
+				AAE4027B23F3563600489F84 /* TabBarVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -171,40 +175,11 @@
 			isa = PBXGroup;
 			children = (
 				EF71F73423F16362007BE84D /* Main.storyboard */,
+				EFB6340E241F830800E04818 /* SuperVC.storyboard */,
+				EFB63415241F854700E04818 /* FavoriteVC.storyboard */,
+				EFB63417241F85F000E04818 /* SettingsVC.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		EF71F74823F17631007BE84D /* Conrtrollers */ = {
-			isa = PBXGroup;
-			children = (
-				EF71F73223F16362007BE84D /* MainVC.swift */,
-			);
-			path = Conrtrollers;
-			sourceTree = "<group>";
-		};
-		EF71F74923F17641007BE84D /* Veiws */ = {
-			isa = PBXGroup;
-			children = (
-				EF71F75023F18011007BE84D /* MainView.swift */,
-			);
-			path = Veiws;
-			sourceTree = "<group>";
-		};
-		EF71F74A23F17653007BE84D /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				EF71F74E23F17D2F007BE84D /* MainVCPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		EF71F74B23F1767E007BE84D /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-				EF71F74C23F1797B007BE84D /* MainInteractor.swift */,
-			);
-			path = Interactors;
 			sourceTree = "<group>";
 		};
 		EF71F75223F1A7AE007BE84D /* Fonts */ = {
@@ -213,6 +188,24 @@
 				EF71F75623F1AA83007BE84D /* Sukar-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EFB6341F241FB7FE00E04818 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6341B241FB7EF00E04818 /* SearchCollectionViewCell.swift */,
+				EFB6341C241FB7EF00E04818 /* SearchCollectionViewCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EFB63420241FB80900E04818 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				EF0F464123FD419100B00A2B /* SliderCollectionViewCell.swift */,
+				EF0F464223FD419100B00A2B /* SliderCollectionViewCell.xib */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 		EFD5F54823F4236600E08C56 /* Favorite */ = {
@@ -305,12 +298,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB63416241F854700E04818 /* FavoriteVC.storyboard in Resources */,
 				EF71F75723F1AA83007BE84D /* Sukar-Bold.ttf in Resources */,
 				AABA3F0423F2002000E60659 /* download.png in Resources */,
 				EF71F73B23F16368007BE84D /* LaunchScreen.storyboard in Resources */,
 				EF71F73823F16368007BE84D /* Assets.xcassets in Resources */,
+				EFB6341E241FB7EF00E04818 /* SearchCollectionViewCell.xib in Resources */,
 				EF71F73623F16362007BE84D /* Main.storyboard in Resources */,
 				EF0F464423FD419100B00A2B /* SliderCollectionViewCell.xib in Resources */,
+				EFB63418241F85F000E04818 /* SettingsVC.storyboard in Resources */,
+				EFB6340F241F830800E04818 /* SuperVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,14 +320,13 @@
 			files = (
 				EF71F73323F16362007BE84D /* MainVC.swift in Sources */,
 				EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */,
+				EFB6341D241FB7EF00E04818 /* SearchCollectionViewCell.swift in Sources */,
 				EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */,
-				EF71F75123F18011007BE84D /* MainView.swift in Sources */,
 				EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */,
+				EFB6341A241FA77300E04818 /* SuperVC + Collection.swift in Sources */,
 				EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */,
 				AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */,
-				EF71F74F23F17D2F007BE84D /* MainVCPresenter.swift in Sources */,
 				AAE4027C23F3563600489F84 /* TabBarVC.swift in Sources */,
-				EF71F74D23F1797B007BE84D /* MainInteractor.swift in Sources */,
 				EFD5F55023F4267F00E08C56 /* SettingsVC.swift in Sources */,
 				EF0F464623FD844B00B00A2B /* Helper.swift in Sources */,
 			);

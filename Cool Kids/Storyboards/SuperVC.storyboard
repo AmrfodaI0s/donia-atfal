@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="06p-U7-NLH">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SuperCV-->
+        <scene sceneID="Too-Yt-jjE">
+            <objects>
+                <viewController storyboardIdentifier="superVC" id="3la-7z-cRD" customClass="SuperCV" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Crc-b1-dwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-k3-NxZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WVp-LK-VrS">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bwi-Zf-8Kd" firstAttribute="trailing" secondItem="j6Z-k3-NxZ" secondAttribute="trailing" id="8ry-W6-jgs"/>
+                            <constraint firstItem="j6Z-k3-NxZ" firstAttribute="leading" secondItem="bwi-Zf-8Kd" secondAttribute="leading" id="AY7-3k-JNk"/>
+                            <constraint firstItem="j6Z-k3-NxZ" firstAttribute="top" secondItem="bwi-Zf-8Kd" secondAttribute="top" constant="20" id="aXW-Mj-2bW"/>
+                            <constraint firstAttribute="bottom" secondItem="j6Z-k3-NxZ" secondAttribute="bottom" id="viv-ud-T3E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bwi-Zf-8Kd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DWR-YK-aos"/>
+                    <connections>
+                        <outlet property="MainCollectionView" destination="j6Z-k3-NxZ" id="ID4-eq-1ul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5r-j7-7Zf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="-915"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mif-Ll-5Sf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="06p-U7-NLH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8" id="c70-ji-1t8">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WXA-7M-eNO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3la-7z-cRD" kind="relationship" relationship="rootViewController" id="MX9-10-cJP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJ1-Gz-csB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="-915"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8" width="25" height="25"/>
+    </resources>
+</document>
