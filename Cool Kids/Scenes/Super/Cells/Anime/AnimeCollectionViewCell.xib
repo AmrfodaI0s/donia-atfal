@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sukar-Bold.ttf">
+            <string>Sukar-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="animeCell" id="gTV-IL-0wX" customClass="AnimeCollectionViewCell" customModule="Cool_Kids" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="258"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="258"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الأكثر مشاهدة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NQ-wq-jGh">
+                        <rect key="frame" x="24" y="12" width="278" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="h7Z-uc-5zc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mI7-28-KQs">
+                        <rect key="frame" x="0.0" y="65" width="326" height="193"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pWl-zk-ELI">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9NQ-wq-jGh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="4U5-36-eWV"/>
+                <constraint firstAttribute="trailing" secondItem="mI7-28-KQs" secondAttribute="trailing" id="BsO-Gf-LB2"/>
+                <constraint firstItem="9NQ-wq-jGh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="Lxz-4p-fwi"/>
+                <constraint firstAttribute="trailing" secondItem="9NQ-wq-jGh" secondAttribute="trailing" constant="24" id="gn3-bw-ksU"/>
+                <constraint firstItem="mI7-28-KQs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="izq-mg-aSS"/>
+                <constraint firstAttribute="bottom" secondItem="mI7-28-KQs" secondAttribute="bottom" id="oqa-1V-S7k"/>
+                <constraint firstItem="mI7-28-KQs" firstAttribute="top" secondItem="9NQ-wq-jGh" secondAttribute="bottom" constant="12" id="vGr-Dm-rcB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="326" height="258"/>
+            <connections>
+                <outlet property="contentCollectionView" destination="mI7-28-KQs" id="O3O-7I-1UH"/>
+            </connections>
+            <point key="canvasLocation" x="86.956521739130437" y="167.41071428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

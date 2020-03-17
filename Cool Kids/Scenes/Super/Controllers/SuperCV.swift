@@ -17,12 +17,18 @@ class SuperCV: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Helper.setStatusBarColor(view: view, withColor: UIColor(red:0.21, green:0.23, blue:0.31, alpha:1.0))
+        
+        MainCollectionView.delegate = self
+        MainCollectionView.dataSource = self
+        
+        MainCollectionView.register(UINib(nibName: "SearchCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "searchCell")
+        MainCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "silderCell")
+        MainCollectionView.register(UINib(nibName: "AnimeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "animeCell")
+
+//        Helper.setStatusBarColor(view: view, withColor: UIColor(red:0.21, green:0.23, blue:0.31, alpha:1.0))
        
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return .lightContent
-    }
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.title = ""

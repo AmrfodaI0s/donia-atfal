@@ -17,8 +17,8 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-k3-NxZ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WVp-LK-VrS">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="WVp-LK-VrS">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,8 +30,8 @@
                         <color key="backgroundColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bwi-Zf-8Kd" firstAttribute="trailing" secondItem="j6Z-k3-NxZ" secondAttribute="trailing" id="8ry-W6-jgs"/>
+                            <constraint firstItem="j6Z-k3-NxZ" firstAttribute="top" secondItem="Crc-b1-dwZ" secondAttribute="top" constant="20" id="8xT-64-ova"/>
                             <constraint firstItem="j6Z-k3-NxZ" firstAttribute="leading" secondItem="bwi-Zf-8Kd" secondAttribute="leading" id="AY7-3k-JNk"/>
-                            <constraint firstItem="j6Z-k3-NxZ" firstAttribute="top" secondItem="bwi-Zf-8Kd" secondAttribute="top" constant="20" id="aXW-Mj-2bW"/>
                             <constraint firstAttribute="bottom" secondItem="j6Z-k3-NxZ" secondAttribute="bottom" id="viv-ud-T3E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bwi-Zf-8Kd"/>
@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5r-j7-7Zf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="-915"/>
+            <point key="canvasLocation" x="1540" y="-915"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mif-Ll-5Sf">
