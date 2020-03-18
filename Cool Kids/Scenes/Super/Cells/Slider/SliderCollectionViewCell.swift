@@ -15,10 +15,11 @@ class SliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet var sliderCollectionView: UICollectionView!
     
     var counter = 0
+    var arraaay = [#imageLiteral(resourceName: "33657") , #imageLiteral(resourceName: "magna") ,#imageLiteral(resourceName: "konan") , #imageLiteral(resourceName: "gogo")]
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        pageController.numberOfPages = 3
+        pageController.numberOfPages = arraaay.count
         pageController.isUserInteractionEnabled = false
         setupCollection()
          let _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(Slider_Timer), userInfo: nil, repeats: true)
@@ -33,7 +34,7 @@ class SliderCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func Slider_Timer()  {
-        if counter < 3 {
+        if counter < arraaay.count {
             let index = IndexPath(item: counter, section: 0)
             sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
             counter += 1
@@ -49,11 +50,12 @@ class SliderCollectionViewCell: UICollectionViewCell {
 //MARK: - CollectionView
 extension SliderCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        arraaay.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sliderPhotoCell", for: indexPath ) as? SliderPhotoCollectionViewCell else { return UICollectionViewCell() }
+        cell.iv.image = arraaay[indexPath.row]
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -65,6 +67,10 @@ extension SliderCollectionViewCell: UICollectionViewDataSource, UICollectionView
             pageController.currentPage = index
             
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        counter = indexPath.row
     }
     
 }

@@ -11,7 +11,7 @@ import UIKit
 //MARK: - CollectionView
 extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     
     }
     
@@ -25,12 +25,10 @@ extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayou
         } else if indexPath.row == 1 {
             guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "silderCell", for: indexPath) as? SliderCollectionViewCell else { return UICollectionViewCell() }
             return cell
-        } else if indexPath.row == 2 {
-            guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "animeCell", for: indexPath) as? AnimeCollectionViewCell else { return UICollectionViewCell() }
-            return cell
         } else {
-            return UICollectionViewCell()
-            
+            guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "animeCell", for: indexPath) as? AnimeCollectionViewCell else { return UICollectionViewCell() }
+            cell.selected_item = 
+            return cell
         }
     }
     
@@ -41,11 +39,8 @@ extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayou
         else if indexPath.row == 1 {
             return CGSize(width: self.MainCollectionView.bounds.width, height: 180)
         }
-        else if indexPath.row == 2 {
+        else {
             return CGSize(width: self.MainCollectionView.bounds.width, height: 280)
-        }
-        else  {
-            return CGSize(width: self.MainCollectionView.bounds.width , height: 30)
         }
         
     }

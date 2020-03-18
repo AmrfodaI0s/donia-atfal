@@ -9,10 +9,12 @@
 import UIKit
 
 class ContentCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet var iv: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
 }

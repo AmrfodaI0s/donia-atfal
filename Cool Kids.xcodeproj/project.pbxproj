@@ -13,6 +13,8 @@
 		EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F464123FD419100B00A2B /* SliderCollectionViewCell.swift */; };
 		EF0F464423FD419100B00A2B /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0F464223FD419100B00A2B /* SliderCollectionViewCell.xib */; };
 		EF0F464623FD844B00B00A2B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F464523FD844B00B00A2B /* Helper.swift */; };
+		EF1F2A1224224E2A00D2ACB5 /* AnimeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1F2A1124224E2900D2ACB5 /* AnimeDetails.storyboard */; };
+		EF1F2A1524224EE200D2ACB5 /* AnimeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */; };
 		EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F72E23F16362007BE84D /* AppDelegate.swift */; };
 		EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F73023F16362007BE84D /* SceneDelegate.swift */; };
 		EF71F73323F16362007BE84D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F73223F16362007BE84D /* MainVC.swift */; };
@@ -43,6 +45,8 @@
 		EF0F464123FD419100B00A2B /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF0F464223FD419100B00A2B /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF0F464523FD844B00B00A2B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		EF1F2A1124224E2900D2ACB5 /* AnimeDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimeDetails.storyboard; sourceTree = "<group>"; };
+		EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsVC.swift; sourceTree = "<group>"; };
 		EF71F72B23F16362007BE84D /* Cool Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cool Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF71F72E23F16362007BE84D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF71F73023F16362007BE84D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		EF1F2A1324224EA700D2ACB5 /* AnimeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */,
+			);
+			path = AnimeDetails;
+			sourceTree = "<group>";
+		};
 		EF71F72223F16362007BE84D = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +154,7 @@
 				AAE4027723F34A3500489F84 /* Super */,
 				EFD5F54823F4236600E08C56 /* Favorite */,
 				EFD5F54C23F4260E00E08C56 /* Settings */,
+				EF1F2A1324224EA700D2ACB5 /* AnimeDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 				EFB6340E241F830800E04818 /* SuperVC.storyboard */,
 				EFB63415241F854700E04818 /* FavoriteVC.storyboard */,
 				EFB63417241F85F000E04818 /* SettingsVC.storyboard */,
+				EF1F2A1124224E2900D2ACB5 /* AnimeDetails.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -352,6 +366,7 @@
 				EF71F73623F16362007BE84D /* Main.storyboard in Resources */,
 				EF0F464423FD419100B00A2B /* SliderCollectionViewCell.xib in Resources */,
 				EFB63418241F85F000E04818 /* SettingsVC.storyboard in Resources */,
+				EF1F2A1224224E2A00D2ACB5 /* AnimeDetails.storyboard in Resources */,
 				EFB6340F241F830800E04818 /* SuperVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +381,7 @@
 				EF71F73323F16362007BE84D /* MainVC.swift in Sources */,
 				EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */,
 				EFD9F43224211C9F00D1C686 /* ContentCollectionViewCell.swift in Sources */,
+				EF1F2A1524224EE200D2ACB5 /* AnimeDetailsVC.swift in Sources */,
 				EFB6341D241FB7EF00E04818 /* SearchCollectionViewCell.swift in Sources */,
 				EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */,
 				EFD9F42D2421073800D1C686 /* AnimeCollectionViewCell.swift in Sources */,
