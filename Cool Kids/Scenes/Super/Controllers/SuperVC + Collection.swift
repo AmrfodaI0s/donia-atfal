@@ -27,7 +27,12 @@ extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayou
             return cell
         } else {
             guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "animeCell", for: indexPath) as? AnimeCollectionViewCell else { return UICollectionViewCell() }
-            cell.selected_item = 
+            cell.selected_item = { [weak self] selected in
+            let DestinatioVC = UIStoryboard(name: "AnimeDetails", bundle: nil).instantiateViewController(withIdentifier: "DetailedVC") as! AnimeDetailsVC
+            DestinatioVC.modalPresentationStyle = .fullScreen
+            self!.present(DestinatioVC, animated: true, completion: nil)
+            
+        }
             return cell
         }
     }

@@ -12,57 +12,67 @@
             <objects>
                 <viewController storyboardIdentifier="DetailedVC" id="o7n-1m-9vX" customClass="AnimeDetailsVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6S6-99-LrP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeO-BA-2WA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="D22-pz-c5I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eq-fv-rJm">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="984"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-n9-cxJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magna" translatesAutoresizingMaskIntoConstraints="NO" id="Dfb-Lb-D0c">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="320"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gogo" translatesAutoresizingMaskIntoConstraints="NO" id="egf-xR-3e1">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="320" id="jT2-va-dcI"/>
+                                                    <constraint firstAttribute="height" constant="320" id="Nas-WL-zTJ"/>
                                                 </constraints>
                                             </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-Va-7V4" customClass="x" customModule="Cool_Kids" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="160" width="375" height="160"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="uID-nB-pdw"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Dfb-Lb-D0c" secondAttribute="trailing" id="F3d-Nr-yQx"/>
-                                            <constraint firstItem="Dfb-Lb-D0c" firstAttribute="top" secondItem="7eq-fv-rJm" secondAttribute="top" id="MJf-v9-425"/>
-                                            <constraint firstItem="Dfb-Lb-D0c" firstAttribute="leading" secondItem="7eq-fv-rJm" secondAttribute="leading" id="ava-yk-th3"/>
+                                            <constraint firstAttribute="height" priority="999" constant="1500" id="7jT-OL-FDX"/>
+                                            <constraint firstItem="Rg2-Va-7V4" firstAttribute="top" secondItem="sWc-n9-cxJ" secondAttribute="top" constant="160" id="BcO-l5-KUy"/>
+                                            <constraint firstAttribute="trailing" secondItem="egf-xR-3e1" secondAttribute="trailing" id="Fh6-IT-wBK"/>
+                                            <constraint firstItem="Rg2-Va-7V4" firstAttribute="leading" secondItem="sWc-n9-cxJ" secondAttribute="leading" id="GzY-zu-2dH"/>
+                                            <constraint firstItem="egf-xR-3e1" firstAttribute="leading" secondItem="sWc-n9-cxJ" secondAttribute="leading" id="Kdr-mc-TzZ"/>
+                                            <constraint firstItem="egf-xR-3e1" firstAttribute="top" secondItem="sWc-n9-cxJ" secondAttribute="top" id="Xly-Df-yzo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rg2-Va-7V4" secondAttribute="trailing" id="fTk-V5-H3D"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="7eq-fv-rJm" firstAttribute="leading" secondItem="WeO-BA-2WA" secondAttribute="leading" id="Exz-j7-CEd"/>
-                                    <constraint firstItem="7eq-fv-rJm" firstAttribute="width" secondItem="WeO-BA-2WA" secondAttribute="width" multiplier="0.957333" id="KeE-gP-chN"/>
-                                    <constraint firstAttribute="trailing" secondItem="7eq-fv-rJm" secondAttribute="trailing" id="Mg6-6Q-fT4"/>
-                                    <constraint firstItem="7eq-fv-rJm" firstAttribute="top" secondItem="WeO-BA-2WA" secondAttribute="top" id="luF-Mq-bWZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="7eq-fv-rJm" secondAttribute="bottom" id="p4Q-6e-VD9"/>
-                                    <constraint firstItem="7eq-fv-rJm" firstAttribute="height" secondItem="WeO-BA-2WA" secondAttribute="height" multiplier="0.984" id="vS6-7t-TKD"/>
+                                    <constraint firstAttribute="bottom" secondItem="sWc-n9-cxJ" secondAttribute="bottom" id="6hM-Ot-irf"/>
+                                    <constraint firstItem="sWc-n9-cxJ" firstAttribute="leading" secondItem="D22-pz-c5I" secondAttribute="leading" id="9W2-NN-lSL"/>
+                                    <constraint firstAttribute="trailing" secondItem="sWc-n9-cxJ" secondAttribute="trailing" id="HOc-kC-tGb"/>
+                                    <constraint firstItem="sWc-n9-cxJ" firstAttribute="top" secondItem="D22-pz-c5I" secondAttribute="top" id="Ley-bD-P69"/>
+                                    <constraint firstItem="sWc-n9-cxJ" firstAttribute="width" secondItem="D22-pz-c5I" secondAttribute="width" id="NcZ-8p-rP1"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WeO-BA-2WA" firstAttribute="leading" secondItem="XkM-Yd-LNp" secondAttribute="leading" id="4b6-IB-a35"/>
-                            <constraint firstItem="WeO-BA-2WA" firstAttribute="top" secondItem="XkM-Yd-LNp" secondAttribute="top" id="FhN-bq-szJ"/>
-                            <constraint firstItem="WeO-BA-2WA" firstAttribute="bottom" secondItem="XkM-Yd-LNp" secondAttribute="bottom" id="UED-WU-JNF"/>
-                            <constraint firstItem="WeO-BA-2WA" firstAttribute="trailing" secondItem="XkM-Yd-LNp" secondAttribute="trailing" id="epT-ta-T0x"/>
+                            <constraint firstItem="D22-pz-c5I" firstAttribute="leading" secondItem="XkM-Yd-LNp" secondAttribute="leading" id="Gw5-5y-dt7"/>
+                            <constraint firstItem="D22-pz-c5I" firstAttribute="top" secondItem="XkM-Yd-LNp" secondAttribute="top" id="XYH-qP-c5b"/>
+                            <constraint firstItem="XkM-Yd-LNp" firstAttribute="bottom" secondItem="D22-pz-c5I" secondAttribute="bottom" id="cYg-E7-xia"/>
+                            <constraint firstItem="XkM-Yd-LNp" firstAttribute="trailing" secondItem="D22-pz-c5I" secondAttribute="trailing" id="yXK-6E-G5I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XkM-Yd-LNp"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9V-jm-80I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87.200000000000003" y="-31.484257871064472"/>
+            <point key="canvasLocation" x="-870" y="-237"/>
         </scene>
     </scenes>
     <resources>
-        <image name="magna" width="160" height="90"/>
+        <image name="gogo" width="250" height="140.5"/>
     </resources>
 </document>

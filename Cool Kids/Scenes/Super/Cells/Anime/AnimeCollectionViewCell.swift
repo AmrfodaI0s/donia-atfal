@@ -42,7 +42,7 @@ extension AnimeCollectionViewCell: UICollectionViewDelegate , UICollectionViewDa
         return CGSize(width: 150, height: 190)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        selected_item?(indexPath.row)
     }
     
 }
