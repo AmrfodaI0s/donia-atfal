@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sukar-Bold.ttf">
+            <string>Sukar-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="animeDetailCell" id="gTV-IL-0wX" customClass="AnimeDetailsCollectionViewCell" customModule="Cool_Kids" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="173"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="173"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conan" translatesAutoresizingMaskIntoConstraints="NO" id="1Ey-7p-0bN">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="173"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d83-mV-Gzw">
+                        <rect key="frame" x="0.0" y="131" width="260" height="42"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الحلقة ٣٣" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2L-UW-Kcm">
+                                <rect key="frame" x="170" y="5.5" width="74" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3uC-eA-JEE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgX-CX-7IG" userLabel="duration view">
+                                <rect key="frame" x="8" y="12" width="36" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW2-8O-kYk">
+                                        <rect key="frame" x="6" y="2.5" width="24" height="13.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dW2-8O-kYk" firstAttribute="centerY" secondItem="cgX-CX-7IG" secondAttribute="centerY" id="UR0-Z2-36y"/>
+                                    <constraint firstItem="dW2-8O-kYk" firstAttribute="centerX" secondItem="cgX-CX-7IG" secondAttribute="centerX" id="WcC-cJ-KDS"/>
+                                    <constraint firstAttribute="width" constant="36" id="aog-Lg-m0o"/>
+                                    <constraint firstAttribute="height" constant="18" id="pCJ-XM-XlV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.31372549019607843" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="6Sl-PN-VrU"/>
+                            <constraint firstAttribute="trailing" secondItem="p2L-UW-Kcm" secondAttribute="trailing" constant="16" id="RMu-PQ-GgM"/>
+                            <constraint firstItem="cgX-CX-7IG" firstAttribute="leading" secondItem="d83-mV-Gzw" secondAttribute="leading" constant="8" id="Ywz-rI-a8V"/>
+                            <constraint firstItem="p2L-UW-Kcm" firstAttribute="centerY" secondItem="d83-mV-Gzw" secondAttribute="centerY" id="qku-ke-eMx"/>
+                            <constraint firstItem="cgX-CX-7IG" firstAttribute="centerY" secondItem="d83-mV-Gzw" secondAttribute="centerY" id="xi2-uw-fLe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="d83-mV-Gzw" secondAttribute="bottom" id="7dw-oX-LUq"/>
+                <constraint firstAttribute="trailing" secondItem="1Ey-7p-0bN" secondAttribute="trailing" id="8A1-Bk-c0k"/>
+                <constraint firstItem="1Ey-7p-0bN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PoL-Fm-kh4"/>
+                <constraint firstAttribute="bottom" secondItem="1Ey-7p-0bN" secondAttribute="bottom" id="QyR-xu-P9x"/>
+                <constraint firstItem="d83-mV-Gzw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Sto-35-E5a"/>
+                <constraint firstAttribute="trailing" secondItem="d83-mV-Gzw" secondAttribute="trailing" id="Y9j-81-tzb"/>
+                <constraint firstItem="1Ey-7p-0bN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="byz-a5-Xb1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="260" height="173"/>
+            <connections>
+                <outlet property="anime_iv" destination="1Ey-7p-0bN" id="NCy-Co-fGA"/>
+                <outlet property="durationLabel" destination="dW2-8O-kYk" id="F6n-y4-0MF"/>
+                <outlet property="duration_view" destination="cgX-CX-7IG" id="99D-Yc-SCO"/>
+                <outlet property="episode" destination="p2L-UW-Kcm" id="FCh-B4-QXT"/>
+                <outlet property="title_view" destination="d83-mV-Gzw" id="0F6-Xz-2rm"/>
+            </connections>
+            <point key="canvasLocation" x="247.82608695652175" y="128.90625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="conan" width="256" height="144"/>
+    </resources>
+</document>

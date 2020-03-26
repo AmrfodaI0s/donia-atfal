@@ -22,36 +22,28 @@ class Helper {
            }
        }
 }
-	
-class Gredient: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-//        fatalError("init(coder:) has not been implemented")
-    }
+
+
+@IBDesignable class GradientView: UIView {
     
-  
-    func Gradiant_View(first_color : UIColor , second_color : UIColor) {
-        let gradiantLayer = CAGradientLayer()
-        gradiantLayer.frame = self.bounds
-        gradiantLayer.colors = [first_color.cgColor , second_color.cgColor]
-        gradiantLayer.locations = [0.0 , 1.0]
-        layer.insertSublayer(gradiantLayer, at: 0)
+    @IBInspectable var topColor: UIColor = UIColor.blue {
+        didSet {
+            self.setNeedsLayout()
+        }
     }
+    @IBInspectable var bottomColor: UIColor = UIColor.orange {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    override func layoutSubviews() {
+        let gradient = CAGradientLayer()
+        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
+        //        gradient.startPoint = CGPoint(x: 0, y: 0)
+        //        gradient.endPoint = CGPoint(x: 1, y: 1)
+        gradient.locations = [0.0 , 1.0]
+        gradient.frame = bounds
+        layer.insertSublayer(gradient, at: 0)
+    }  
 }
 
-class x : UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .black
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}

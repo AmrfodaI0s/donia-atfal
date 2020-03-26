@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA44FE7D242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44FE7C242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift */; };
+		AA44FE822429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44FE802429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift */; };
+		AA44FE832429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA44FE812429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib */; };
 		AABA3F0423F2002000E60659 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA3F0323F2002000E60659 /* download.png */; };
 		AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4027923F34AEA00489F84 /* SuperCV.swift */; };
 		AAE4027C23F3563600489F84 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4027B23F3563600489F84 /* TabBarVC.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA44FE7C242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimeDetailsVC + Collection.swift"; sourceTree = "<group>"; };
+		AA44FE802429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA44FE812429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimeDetailsCollectionViewCell.xib; sourceTree = "<group>"; };
 		AABA3F0323F2002000E60659 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		AAE4027923F34AEA00489F84 /* SuperCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCV.swift; sourceTree = "<group>"; };
 		AAE4027B23F3563600489F84 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -83,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA44FE7E242967BF00CBCAB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */,
+				AA44FE7C242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AA44FE7F242967D500CBCAB2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA44FE802429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift */,
+				AA44FE812429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		AAE4027723F34A3500489F84 /* Super */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +138,8 @@
 		EF1F2A1324224EA700D2ACB5 /* AnimeDetails */ = {
 			isa = PBXGroup;
 			children = (
-				EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */,
+				AA44FE7E242967BF00CBCAB2 /* Controllers */,
+				AA44FE7F242967D500CBCAB2 /* Cells */,
 			);
 			path = AnimeDetails;
 			sourceTree = "<group>";
@@ -367,6 +392,7 @@
 				EF0F464423FD419100B00A2B /* SliderCollectionViewCell.xib in Resources */,
 				EFB63418241F85F000E04818 /* SettingsVC.storyboard in Resources */,
 				EF1F2A1224224E2A00D2ACB5 /* AnimeDetails.storyboard in Resources */,
+				AA44FE832429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib in Resources */,
 				EFB6340F241F830800E04818 /* SuperVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,10 +408,12 @@
 				EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */,
 				EFD9F43224211C9F00D1C686 /* ContentCollectionViewCell.swift in Sources */,
 				EF1F2A1524224EE200D2ACB5 /* AnimeDetailsVC.swift in Sources */,
+				AA44FE7D242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift in Sources */,
 				EFB6341D241FB7EF00E04818 /* SearchCollectionViewCell.swift in Sources */,
 				EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */,
 				EFD9F42D2421073800D1C686 /* AnimeCollectionViewCell.swift in Sources */,
 				EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */,
+				AA44FE822429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift in Sources */,
 				EFB6341A241FA77300E04818 /* SuperVC + Collection.swift in Sources */,
 				EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */,
 				AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */,

@@ -24,11 +24,10 @@ class SuperCV: UIViewController {
         MainCollectionView.register(UINib(nibName: "SearchCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "searchCell")
         MainCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "silderCell")
         MainCollectionView.register(UINib(nibName: "AnimeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "animeCell")
-
-//        Helper.setStatusBarColor(view: view, withColor: UIColor(red:0.21, green:0.23, blue:0.31, alpha:1.0))
-       
     }
-
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.title = ""
@@ -38,9 +37,5 @@ class SuperCV: UIViewController {
         self.title = "الرئيسية"
     }
     
-    //MARK: - collectionView Setup
-    private func collection_setup() {
-
-    }
 }
 

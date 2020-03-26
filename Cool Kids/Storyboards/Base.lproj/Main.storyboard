@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أول تطبيق لمشاهدة أفلام الكرتون" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRr-X5-LZX">
-                                <rect key="frame" x="93.5" y="228" width="188" height="91"/>
+                                <rect key="frame" x="62.5" y="228" width="250" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="jjU-ov-nyQ"/>
                                     <constraint firstAttribute="height" constant="91" id="qKb-If-mJS"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="hsy-yS-w2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Y7J-b8-CGr"/>
                             <constraint firstItem="hsy-yS-w2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="axc-1F-R37"/>
                             <constraint firstItem="KRr-X5-LZX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blv-ir-hxc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7YQ-GA-o28" secondAttribute="bottom" id="ckn-kn-xYg"/>
+                            <constraint firstAttribute="bottom" secondItem="7YQ-GA-o28" secondAttribute="bottom" id="ckn-kn-xYg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hsy-yS-w2t" secondAttribute="bottom" constant="32" id="nmK-lQ-3In"/>
                             <constraint firstItem="7YQ-GA-o28" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pgH-oW-KVh"/>
                         </constraints>
