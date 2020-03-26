@@ -25,22 +25,23 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         guard let cell = animeCollection.dequeueReusableCell(withReuseIdentifier: "animeDetailCell", for: indexPath) as? AnimeDetailsCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = animeCollection.dequeueReusableCell(withReuseIdentifier: "animeDetailCell", for: indexPath) as? AnimeDetailsCollectionViewCell else { return UICollectionViewCell() }
         cell.layer.cornerRadius = 12
         let segmentIndex = segmentController.selectedSegmentIndex
         switch segmentIndex {
         case 0 :
-            cell.durationLabel.layer.cornerRadius = 12
+            tryMe(cell: cell, state: true)
+            //showCellAnimeTitle(cell: cell)
+            return cell
+        case 1:
+            tryMe(cell: cell, state: false)
+            //hideCellAnimeTitle(cell: cell)
             return cell
         default:
-            cell.durationLabel.isHidden = true
-            cell.title_view.isHidden = true
-            cell.episode.isHidden = true
-            cell.duration_view.isHidden = true
+            //showCellAnimeTitle(cell: cell)
             return cell
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let segmentIndex = segmentController.selectedSegmentIndex
         switch segmentIndex {

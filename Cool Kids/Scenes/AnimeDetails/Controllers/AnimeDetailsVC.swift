@@ -54,5 +54,27 @@ class AnimeDetailsVC: UIViewController {
         animeCollectionViewHeight.constant = animeCollection.collectionViewLayout.collectionViewContentSize.height
         self.view.layoutIfNeeded()
     }
+    //MARK: - Show and Hide AnimeCell Title Attributes
+    
+    func hideCellAnimeTitle(cell: AnimeDetailsCollectionViewCell) {
+             cell.durationLabel.isHidden =  true
+             cell.title_view.isHidden = true
+             cell.episode.isHidden = true
+             cell.duration_view.isHidden = true
+     }
+     // function unused
+     func showCellAnimeTitle(cell: AnimeDetailsCollectionViewCell) {
+             cell.durationLabel.isHidden =  false
+             cell.title_view.isHidden = false
+             cell.episode.isHidden = false
+             cell.duration_view.isHidden = false
+     }
+    // function unused
+     func tryMe(cell: AnimeDetailsCollectionViewCell, state: Bool){
+         cell.durationLabel.isHidden = state ? false : true
+         cell.title_view.isHidden = state ? false : true
+         cell.episode.isHidden = state ? false : true
+         cell.duration_view.isHidden = state ? false : true
+     }
     
 }
