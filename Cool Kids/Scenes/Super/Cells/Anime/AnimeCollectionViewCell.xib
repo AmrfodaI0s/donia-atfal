@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mI7-28-KQs">
-                        <rect key="frame" x="0.0" y="61" width="326" height="197"/>
+                        <rect key="frame" x="0.0" y="53" width="326" height="205"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pWl-zk-ELI">
@@ -51,11 +51,12 @@
                 <constraint firstAttribute="trailing" secondItem="9NQ-wq-jGh" secondAttribute="trailing" constant="24" id="gn3-bw-ksU"/>
                 <constraint firstItem="mI7-28-KQs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="izq-mg-aSS"/>
                 <constraint firstAttribute="bottom" secondItem="mI7-28-KQs" secondAttribute="bottom" id="oqa-1V-S7k"/>
-                <constraint firstItem="mI7-28-KQs" firstAttribute="top" secondItem="9NQ-wq-jGh" secondAttribute="bottom" constant="8" id="vGr-Dm-rcB"/>
+                <constraint firstItem="mI7-28-KQs" firstAttribute="top" secondItem="9NQ-wq-jGh" secondAttribute="bottom" id="vGr-Dm-rcB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="326" height="258"/>
             <connections>
+                <outlet property="category_label" destination="9NQ-wq-jGh" id="Q4S-W1-PC3"/>
                 <outlet property="contentCollectionView" destination="mI7-28-KQs" id="O3O-7I-1UH"/>
             </connections>
             <point key="canvasLocation" x="86.956521739130437" y="167.41071428571428"/>

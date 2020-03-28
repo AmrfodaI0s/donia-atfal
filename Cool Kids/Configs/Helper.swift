@@ -9,6 +9,8 @@
 import UIKit
 
 class Helper {
+   static var vSpinner : UIView?
+    
    static func setStatusBarColor(view : UIView , withColor:UIColor) {
            let tag = 12321
            if let _ = view.viewWithTag(tag){
@@ -21,6 +23,28 @@ class Helper {
                view.addSubview(overView)
            }
        }
+    
+   class func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.large)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+   class func removeSpinner() {
+        DispatchQueue.main.async {
+            self.vSpinner?.removeFromSuperview()
+            self.vSpinner = nil
+        }
+    }
 }
 
 
@@ -44,6 +68,7 @@ class Helper {
         gradient.locations = [0.0 , 1.0]
         gradient.frame = bounds
         layer.insertSublayer(gradient, at: 0)
-    }  
+    }
+    
 }
 

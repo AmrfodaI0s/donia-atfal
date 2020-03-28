@@ -11,15 +11,13 @@ import UIKit
 //MARK: - CollectionView
 extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    
+        return (categories?.count ?? 1) + 2 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.row == 0 {
             guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as? SearchCollectionViewCell else { return UICollectionViewCell() }
-            //cell.iv.image = UIImage(named: imageSet[indexPath.row])
             return cell
             
         } else if indexPath.row == 1 {
@@ -27,6 +25,7 @@ extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayou
             return cell
         } else {
             guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "animeCell", for: indexPath) as? AnimeCollectionViewCell else { return UICollectionViewCell() }
+            cell.category_label.text = self.categories?[indexPath.row - 2].name ?? ""
             cell.selected_item = { [weak self] selected in
             let DestinatioVC = UIStoryboard(name: "AnimeDetails", bundle: nil).instantiateViewController(withIdentifier: "DetailedVC") as! AnimeDetailsVC
             DestinatioVC.modalPresentationStyle = .fullScreen

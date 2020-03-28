@@ -11,6 +11,7 @@ import UIKit
 class AnimeCollectionViewCell : UICollectionViewCell{
     
     @IBOutlet var contentCollectionView: UICollectionView!
+    @IBOutlet weak var category_label: UILabel!
     
     let cell_ID = "contentCell"
     var selected_item : ((Int)->())?

@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		284296BC3654BC8CF808714E /* Pods_Cool_Kids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1EA995DD07BD2C293DA102 /* Pods_Cool_Kids.framework */; };
 		AA44FE7D242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44FE7C242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift */; };
 		AA44FE822429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44FE802429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift */; };
 		AA44FE832429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA44FE812429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib */; };
+		AA591150242D3C3700E5172F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59114F242D3C3700E5172F /* Reachability.swift */; };
+		AA591156242D469100E5172F /* AnimeDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA591155242D469100E5172F /* AnimeDataServices.swift */; };
+		AA591158242D59C300E5172F /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA591157242D59C300E5172F /* URLs.swift */; };
+		AA59115A242D5AE000E5172F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA591159242D5AE000E5172F /* Category.swift */; };
 		AABA3F0423F2002000E60659 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA3F0323F2002000E60659 /* download.png */; };
 		AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4027923F34AEA00489F84 /* SuperCV.swift */; };
 		AAE4027C23F3563600489F84 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4027B23F3563600489F84 /* TabBarVC.swift */; };
@@ -42,9 +47,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DADA9B38D155914B1EED269 /* Pods-Cool Kids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool Kids.release.xcconfig"; path = "Target Support Files/Pods-Cool Kids/Pods-Cool Kids.release.xcconfig"; sourceTree = "<group>"; };
+		0F1EA995DD07BD2C293DA102 /* Pods_Cool_Kids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cool_Kids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61392BCBD3AB9299CA377130 /* Pods-Cool Kids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool Kids.debug.xcconfig"; path = "Target Support Files/Pods-Cool Kids/Pods-Cool Kids.debug.xcconfig"; sourceTree = "<group>"; };
 		AA44FE7C242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimeDetailsVC + Collection.swift"; sourceTree = "<group>"; };
 		AA44FE802429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA44FE812429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimeDetailsCollectionViewCell.xib; sourceTree = "<group>"; };
+		AA59114F242D3C3700E5172F /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AA591155242D469100E5172F /* AnimeDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDataServices.swift; sourceTree = "<group>"; };
+		AA591157242D59C300E5172F /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		AA591159242D5AE000E5172F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AABA3F0323F2002000E60659 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		AAE4027923F34AEA00489F84 /* SuperCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCV.swift; sourceTree = "<group>"; };
 		AAE4027B23F3563600489F84 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -83,12 +95,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284296BC3654BC8CF808714E /* Pods_Cool_Kids.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A79F7DE636EE9161EDC8489D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61392BCBD3AB9299CA377130 /* Pods-Cool Kids.debug.xcconfig */,
+				0DADA9B38D155914B1EED269 /* Pods-Cool Kids.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA44FE7E242967BF00CBCAB2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +129,48 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		AA59114E242D3C0D00E5172F /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				AA59114F242D3C3700E5172F /* Reachability.swift */,
+			);
+			path = Connectivity;
+			sourceTree = "<group>";
+		};
+		AA591151242D3C9C00E5172F /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				AA591152242D3D3C00E5172F /* EndPointConstants */,
+				AA591154242D465000E5172F /* AnimeDataServices */,
+				AA591153242D3D4D00E5172F /* DTO */,
+			);
+			path = DataServices;
+			sourceTree = "<group>";
+		};
+		AA591152242D3D3C00E5172F /* EndPointConstants */ = {
+			isa = PBXGroup;
+			children = (
+				AA591157242D59C300E5172F /* URLs.swift */,
+			);
+			path = EndPointConstants;
+			sourceTree = "<group>";
+		};
+		AA591153242D3D4D00E5172F /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AA591159242D5AE000E5172F /* Category.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		AA591154242D465000E5172F /* AnimeDataServices */ = {
+			isa = PBXGroup;
+			children = (
+				AA591155242D469100E5172F /* AnimeDataServices.swift */,
+			);
+			path = AnimeDataServices;
+			sourceTree = "<group>";
+		};
 		AAE4027723F34A3500489F84 /* Super */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +187,14 @@
 				EFB63419241FA77300E04818 /* SuperVC + Collection.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E4C1749BA581B467CA83C248 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F1EA995DD07BD2C293DA102 /* Pods_Cool_Kids.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF0F464023FD415900B00A2B /* Cells */ = {
@@ -149,6 +221,8 @@
 			children = (
 				EF71F72D23F16362007BE84D /* Cool Kids */,
 				EF71F72C23F16362007BE84D /* Products */,
+				A79F7DE636EE9161EDC8489D /* Pods */,
+				E4C1749BA581B467CA83C248 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				EF71F74423F16BDF007BE84D /* Core */,
+				AA591151242D3C9C00E5172F /* DataServices */,
 				EF71F74223F16BC6007BE84D /* Scenes */,
 				EF71F74723F16C29007BE84D /* Storyboards */,
 				EF71F74623F16C1E007BE84D /* Configs */,
@@ -216,6 +291,7 @@
 		EF71F74623F16C1E007BE84D /* Configs */ = {
 			isa = PBXGroup;
 			children = (
+				AA59114E242D3C0D00E5172F /* Connectivity */,
 				EF71F73C23F16368007BE84D /* Info.plist */,
 				EF0F464523FD844B00B00A2B /* Helper.swift */,
 			);
@@ -328,9 +404,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF71F73F23F16368007BE84D /* Build configuration list for PBXNativeTarget "Cool Kids" */;
 			buildPhases = (
+				10DA473EF5477A3E883F5513 /* [CP] Check Pods Manifest.lock */,
 				EF71F72723F16362007BE84D /* Sources */,
 				EF71F72823F16362007BE84D /* Frameworks */,
 				EF71F72923F16362007BE84D /* Resources */,
+				EEEC7515056AF2B76DB05224 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +477,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10DA473EF5477A3E883F5513 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cool Kids-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEEC7515056AF2B76DB05224 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cool Kids/Pods-Cool Kids-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cool Kids/Pods-Cool Kids-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cool Kids/Pods-Cool Kids-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF71F72723F16362007BE84D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -412,15 +532,19 @@
 				EFB6341D241FB7EF00E04818 /* SearchCollectionViewCell.swift in Sources */,
 				EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */,
 				EFD9F42D2421073800D1C686 /* AnimeCollectionViewCell.swift in Sources */,
+				AA591156242D469100E5172F /* AnimeDataServices.swift in Sources */,
 				EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */,
 				AA44FE822429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift in Sources */,
 				EFB6341A241FA77300E04818 /* SuperVC + Collection.swift in Sources */,
 				EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */,
 				AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */,
 				AAE4027C23F3563600489F84 /* TabBarVC.swift in Sources */,
+				AA591150242D3C3700E5172F /* Reachability.swift in Sources */,
 				EFD5F55023F4267F00E08C56 /* SettingsVC.swift in Sources */,
 				EFD9F4282420D5E300D1C686 /* SliderPhotoCollectionViewCell.swift in Sources */,
 				EF0F464623FD844B00B00A2B /* Helper.swift in Sources */,
+				AA591158242D59C300E5172F /* URLs.swift in Sources */,
+				AA59115A242D5AE000E5172F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +686,7 @@
 		};
 		EF71F74023F16368007BE84D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61392BCBD3AB9299CA377130 /* Pods-Cool Kids.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -581,6 +706,7 @@
 		};
 		EF71F74123F16368007BE84D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DADA9B38D155914B1EED269 /* Pods-Cool Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
