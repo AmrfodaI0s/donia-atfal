@@ -9,19 +9,13 @@
 import Foundation
 //class Results: Codable {
 //    var categories: [Category]?
-//}
-//class Category: Codable {
-//    let id: Int?
-//    let name: String?
-//    let image: String?
-//}
-struct CategoryE: Codable {
+struct Category: Codable {
     let id: Int
     let name: String
     let image, largeImage: String?
     let releaseDate: Int?
     let parentID, childrenCount, videosCount, videosViews: Int
-    let children: [CategoryE]?
+    let children: [Category]?
 
     enum CodingKeys: String, CodingKey {
         case id, name, image
@@ -32,4 +26,5 @@ struct CategoryE: Codable {
     }
 }
 
-typealias Category = [CategoryE]
+typealias Categories = [Category]?
+

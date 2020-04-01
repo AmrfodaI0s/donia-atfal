@@ -8,12 +8,12 @@
 import UIKit
 extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
     func configureCollection() {
-        animeCollection.delegate = self
-        animeCollection.dataSource = self
-        animeCollection.register(UINib(nibName: "AnimeDetailsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "animeDetailCell")
+        anime.collectionView?.delegate = self
+        anime.collectionView?.dataSource = self
+        anime.collectionView?.register(UINib(nibName: "AnimeDetailsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "animeDetailCell")
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let segmentIndex = segmentController.selectedSegmentIndex
+        let segmentIndex = anime.segmentController?.selectedSegmentIndex
         switch segmentIndex {
         case 0:
             return 4
@@ -25,9 +25,10 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = animeCollection.dequeueReusableCell(withReuseIdentifier: "animeDetailCell", for: indexPath) as? AnimeDetailsCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView
+            .dequeueReusableCell(withReuseIdentifier: "animeDetailCell", for: indexPath) as? AnimeDetailsCollectionViewCell else { return UICollectionViewCell() }
         cell.layer.cornerRadius = 12
-        let segmentIndex = segmentController.selectedSegmentIndex
+        let segmentIndex = anime.segmentController?.selectedSegmentIndex
         switch segmentIndex {
         case 0 :
             tryMe(cell: cell, state: true)
@@ -43,14 +44,15 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let segmentIndex = segmentController.selectedSegmentIndex
+        let segmentIndex = anime.segmentController?.selectedSegmentIndex
         switch segmentIndex {
         case 0 :
-            return CGSize(width: self.animeCollection.bounds.width - 48, height: 162)
+            return CGSize(width: (self.anime.collectionView?.bounds.width)! - 48, height: 162)
         case 1 :
-            return CGSize(width: (self.animeCollection.bounds.width - 60) / 2, height: 162)
+            return CGSize(width: ((self.anime.collectionView?.bounds.width)! - 60) / 2, height: 162)
         default :
-            return CGSize(width: self.animeCollection.bounds.width - 48, height: 162)
+            return CGSize(width: (self.anime.collectionView?.bounds.width)!
+                - 48, height: 162)
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

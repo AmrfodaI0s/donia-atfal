@@ -12,9 +12,9 @@ class URLs {
     
    //MARK: -  Donia-Alatfal URLs
     
-    static let main_url: String = "https://donia-alatfal.lodex-solutions.com/api/v1/"
+    static let main_url: String = "https://donia-alatfal.lodex-solutions.com/api/v1"
     static let banner: String = ""
-    static let categories: String = main_url + "categories/"
+    static let categories: String = main_url + "/categories"
     static let videos: String = ""
-    
+    static let imageRequestURL = "https://donia-alatfal.lodex-solutions.com"
     }

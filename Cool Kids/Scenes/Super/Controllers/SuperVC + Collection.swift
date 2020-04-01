@@ -11,7 +11,7 @@ import UIKit
 //MARK: - CollectionView
 extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (categories?.count ?? 1) + 2 
+        return categories.count + 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -25,13 +25,14 @@ extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayou
             return cell
         } else {
             guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "animeCell", for: indexPath) as? AnimeCollectionViewCell else { return UICollectionViewCell() }
-            cell.category_label.text = self.categories?[indexPath.row - 2].name ?? ""
-            cell.selected_item = { [weak self] selected in
-            let DestinatioVC = UIStoryboard(name: "AnimeDetails", bundle: nil).instantiateViewController(withIdentifier: "DetailedVC") as! AnimeDetailsVC
-            DestinatioVC.modalPresentationStyle = .fullScreen
-            self!.present(DestinatioVC, animated: true, completion: nil)
-            
-        }
+            cell.categories = categories[indexPath.row - 2].children!
+            cell.category_label.text = self.categories[indexPath.row - 2].name 
+            cell.selected_anime = { [weak self] selected in
+            let destinationVC = UIStoryboard(name: "AnimeDetails", bundle: nil).instantiateViewController(withIdentifier: "DetailedVC") as! AnimeDetailsVC
+            destinationVC.selected_anime = selected
+            destinationVC.modalPresentationStyle = .fullScreen
+            self!.present(destinationVC, animated: true, completion: nil)
+            }
             return cell
         }
     }

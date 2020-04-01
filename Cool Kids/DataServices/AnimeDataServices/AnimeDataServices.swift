@@ -13,18 +13,15 @@ class AnimeDataServices {
     
     //MARK: -  get all Categories
     
-    class func getAllCategories(completation: @escaping ( _ error: Error?, _ result: Category? )->() ) {
-        Alamofire.request(URLs.categories).responseJSON { (response) in
+    class func getAllCategories(completation: @escaping ( _ error: Error?, _ result: [Category]? )->() ) {
+        AF.request(URLs.categories).responseJSON { (response) in
             do {
-                let json = try JSONDecoder().decode(Category.self, from: response.data!)
+                let json = try JSONDecoder().decode(Categories.self, from: response.data!)
                 completation(nil, json)
-            //print(json)
-                
             } catch {
                 print(error)
             }
-            
         }
-        
     }
+    
 }

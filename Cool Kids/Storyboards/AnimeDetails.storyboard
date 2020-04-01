@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
         <scene sceneID="QYD-LH-E4v">
             <objects>
                 <viewController storyboardIdentifier="DetailedVC" id="o7n-1m-9vX" customClass="AnimeDetailsVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6S6-99-LrP">
+                    <view key="view" contentMode="scaleToFill" id="6S6-99-LrP" customClass="AnimeDetailsView" customModule="Cool_Kids" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -145,9 +145,6 @@
                                                             <segment title="ذات صلة"/>
                                                         </segments>
                                                         <color key="selectedSegmentTintColor" red="0.22745098039215686" green="0.80000000000000004" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <connections>
-                                                            <action selector="segmentChanged:" destination="o7n-1m-9vX" eventType="valueChanged" id="nyc-7z-eTY"/>
-                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,9 +196,6 @@
                                                 <state key="normal" image="back_white">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="backBtnPressed:" destination="o7n-1m-9vX" eventType="touchUpInside" id="e1X-Tb-j81"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -243,12 +237,21 @@
                             <constraint firstItem="XkM-Yd-LNp" firstAttribute="trailing" secondItem="D22-pz-c5I" secondAttribute="trailing" id="yXK-6E-G5I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XkM-Yd-LNp"/>
+                        <connections>
+                            <outlet property="animeTitleLabel" destination="WMr-mh-zYR" id="Y8v-nl-YUg"/>
+                            <outlet property="anime_iv" destination="egf-xR-3e1" id="s8f-7a-a0G"/>
+                            <outlet property="backBtn" destination="Ekg-Nv-7T5" id="11z-tj-q1m"/>
+                            <outlet property="collectionHeight" destination="6Ad-T5-joo" id="ubO-9e-pbr"/>
+                            <outlet property="collectionView" destination="cW2-UU-eg3" id="lPl-O8-PJX"/>
+                            <outlet property="eposidesCount_label" destination="eHZ-VN-hTD" id="EKW-C2-xvd"/>
+                            <outlet property="releaseDate_label" destination="Jvk-q1-4vE" id="dzC-VG-sUX"/>
+                            <outlet property="segmentController" destination="Liu-Wx-asy" id="lL3-Kc-OrS"/>
+                            <outlet property="viewCount_label" destination="CnF-J0-c9v" id="Z13-AO-wLV"/>
+                        </connections>
                     </view>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
-                        <outlet property="animeCollection" destination="cW2-UU-eg3" id="p9A-WK-XwF"/>
-                        <outlet property="animeCollectionViewHeight" destination="6Ad-T5-joo" id="x7l-pk-aQK"/>
-                        <outlet property="segmentController" destination="Liu-Wx-asy" id="ZXN-g1-Uzz"/>
+                        <outlet property="anime" destination="6S6-99-LrP" id="0mH-gd-TFw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9V-jm-80I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

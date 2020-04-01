@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ContentCollectionViewCell: UICollectionViewCell {
     
@@ -16,5 +17,10 @@ class ContentCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
     }
-
+    func displayImage(url: String) {
+        let url = URL(string: URLs.imageRequestURL + url)!
+        iv.kf.indicatorType = .activity
+        iv.kf.setImage(with: url, options: [.transition(.fade(0.2))])
+}
+//setImage(with: url, placeholder: nil, options: [.transition(ImageTransition.flipFromTop(0.5))], progressBlock: nil, completionHandler: nil)
 }
