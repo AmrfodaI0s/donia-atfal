@@ -16,7 +16,7 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let frame_height = (self.view.frame.size.height)
-        saveUserDefaults(height: frame_height)
+        Helper.saveUserDefaults(height: frame_height)
     }
 
 }
@@ -28,11 +28,7 @@ extension MainVC {
         VC.modalPresentationStyle = .fullScreen
         self.present(VC, animated: true)
     }
-    func saveUserDefaults(height : CGFloat) {
-        let userDefault = UserDefaults.standard
-        userDefault.set(height, forKey: "frameHeight")
-        userDefault.synchronize()
-    }
+    
     
         
 }

@@ -16,6 +16,7 @@
 		AA591158242D59C300E5172F /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA591157242D59C300E5172F /* URLs.swift */; };
 		AA59115A242D5AE000E5172F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA591159242D5AE000E5172F /* Category.swift */; };
 		AABA3F0423F2002000E60659 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA3F0323F2002000E60659 /* download.png */; };
+		AABF19EC24353FAD00B09194 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABF19EB24353FAD00B09194 /* Video.swift */; };
 		AAD1A1FB24309D27006320C0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1A1FA24309D27006320C0 /* BaseView.swift */; };
 		AAD1A1FE2430A0E3006320C0 /* AnimeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1A1FD2430A0E3006320C0 /* AnimeDetailsView.swift */; };
 		AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4027923F34AEA00489F84 /* SuperCV.swift */; };
@@ -60,6 +61,7 @@
 		AA591157242D59C300E5172F /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		AA591159242D5AE000E5172F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AABA3F0323F2002000E60659 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		AABF19EB24353FAD00B09194 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		AAD1A1FA24309D27006320C0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AAD1A1FD2430A0E3006320C0 /* AnimeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsView.swift; sourceTree = "<group>"; };
 		AAE4027923F34AEA00489F84 /* SuperCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCV.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				AA591159242D5AE000E5172F /* Category.swift */,
+				AABF19EB24353FAD00B09194 /* Video.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				AAD1A1FB24309D27006320C0 /* BaseView.swift in Sources */,
 				EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */,
 				AA44FE822429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift in Sources */,
+				AABF19EC24353FAD00B09194 /* Video.swift in Sources */,
 				EFB6341A241FA77300E04818 /* SuperVC + Collection.swift in Sources */,
 				EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */,
 				AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */,

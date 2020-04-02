@@ -38,10 +38,10 @@ class SuperCV: UIViewController {
         self.title = "الرئيسية"
         self.navigationController?.viewWillLayoutSubviews()
     }
-//MARK: -  Load Categories data
+    //MARK: -  Load Categories data
     func getCategories(){
         Helper.showSpinner(onView: self.view)
-        AnimeDataServices.getAllCategories { [weak self] (error, categories) in
+        CategoryDataServices.getAllCategories { [weak self] (error, categories) in
             self?.categories = categories!
             self?.MainCollectionView.reloadData()
             Helper.removeSpinner()

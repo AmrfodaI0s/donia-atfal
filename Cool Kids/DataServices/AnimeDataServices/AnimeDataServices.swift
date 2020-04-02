@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class AnimeDataServices {
+class CategoryDataServices {
     
     //MARK: -  get all Categories
     
@@ -23,5 +23,20 @@ class AnimeDataServices {
             }
         }
     }
+}
+class AnimeDataServices {
+    class func getAnimeByID(categoryID: Int,completation: @escaping (_ error: Error?,_ videos: [Video]?) ->()) {
+        let url = URLs.videos + String(categoryID)
+        AF.request(url).responseJSON { (response) in
+            do {
+                let jsonData = try JSONDecoder().decode(Videos.self, from: response.data!)
+                completation(nil, jsonData)
+            } catch {
+                print(error)
+            }
+        }
+    }
     
 }
+
+

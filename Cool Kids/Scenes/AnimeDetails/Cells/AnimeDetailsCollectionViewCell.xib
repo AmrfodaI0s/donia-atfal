@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="131" width="260" height="42"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الحلقة ٣٣" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2L-UW-Kcm">
-                                <rect key="frame" x="170" y="5.5" width="74" height="31"/>
+                                <rect key="frame" x="48" y="5.5" width="196" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="3uC-eA-JEE"/>
                                 </constraints>
@@ -63,6 +63,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.31372549019607843" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="p2L-UW-Kcm" firstAttribute="leading" secondItem="cgX-CX-7IG" secondAttribute="trailing" constant="4" id="2Y8-bN-Ioe"/>
                             <constraint firstAttribute="height" constant="42" id="6Sl-PN-VrU"/>
                             <constraint firstAttribute="trailing" secondItem="p2L-UW-Kcm" secondAttribute="trailing" constant="16" id="RMu-PQ-GgM"/>
                             <constraint firstItem="cgX-CX-7IG" firstAttribute="leading" secondItem="d83-mV-Gzw" secondAttribute="leading" constant="8" id="Ywz-rI-a8V"/>

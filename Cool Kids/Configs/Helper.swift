@@ -45,6 +45,11 @@ class Helper {
             self.vSpinner = nil
         }
     }
+    class func saveUserDefaults(height : CGFloat) {
+        let userDefault = UserDefaults.standard
+        userDefault.set(height, forKey: "frameHeight")
+        userDefault.synchronize()
+    }
 }
 
 
@@ -68,6 +73,16 @@ class Helper {
         gradient.locations = [0.0 , 1.0]
         gradient.frame = bounds
         layer.insertSublayer(gradient, at: 0)
+    }
+    class func getTime(time : Float) -> String {
+        let hours = Int(time/3600)
+        let mints = Int(time/60) % 60
+        let seconds = Int(time.truncatingRemainder(dividingBy: 60))
+        if hours > 0 {
+            return "\(hours):\(mints):\(seconds)"
+        } else {
+            return "\(mints):\(seconds)"
+        }
     }
     
 }
