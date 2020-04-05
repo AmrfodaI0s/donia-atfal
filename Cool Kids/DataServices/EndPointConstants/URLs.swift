@@ -16,5 +16,6 @@ class URLs {
     static let banner: String = ""
     static let categories: String = main_url + "/categories/"
     static let videos: String = main_url + "/videos/"
+    static let related_videos = videos + "related/"
     static let imageRequestURL = "https://donia-alatfal.lodex-solutions.com"
     }

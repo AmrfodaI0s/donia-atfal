@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftSpinner
 class SuperCV: UIViewController {
 
     var cell_id = "silderCell"
@@ -18,7 +18,7 @@ class SuperCV: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCategories()
+        //getCategories()
         MainCollectionView.delegate = self
         MainCollectionView.dataSource = self
         MainCollectionView.register(UINib(nibName: "SearchCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "searchCell")
@@ -35,19 +35,29 @@ class SuperCV: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.MainCollectionView.reloadData()
+        getCategories()
         self.title = "الرئيسية"
         self.navigationController?.viewWillLayoutSubviews()
     }
+    func fetchCategories(){
+        CategoryDataServices.getAllCategories { [weak self] (error, categories) in
+        self?.categories = categories!
+        self?.MainCollectionView.reloadData()
+        SwiftSpinner.hide()           }
+    }
     //MARK: -  Load Categories data
     func getCategories(){
-        Helper.showSpinner(onView: self.view)
-        CategoryDataServices.getAllCategories { [weak self] (error, categories) in
-            self?.categories = categories!
-            self?.MainCollectionView.reloadData()
-            Helper.removeSpinner()
+        
+        if Reachability.isConnectedToNetwork() {
+            SwiftSpinner.show("جاري التحميل", animated: true)
+            fetchCategories()
+        } else {
+            Alert.noInternetConnection(self) {
+                self.getCategories()
+            }
         }
     }
-   
+    
 }
 
 

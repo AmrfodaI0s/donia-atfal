@@ -50,7 +50,6 @@ class CustomTabBar: UITabBar {
         //super.sizeThatFits(size)
         var sizeThatFits = super.sizeThatFits(size)
         let fHeight = UserDefaults.standard.object(forKey: "frameHeight") as! Int
-        print(fHeight)
         if fHeight > 750 {
             sizeThatFits.height = 88
         } else {

@@ -13,7 +13,7 @@ class CategoryDataServices {
     
     //MARK: -  get all Categories
     
-    class func getAllCategories(completation: @escaping ( _ error: Error?, _ result: [Category]? )->() ) {
+    class func getAllCategories(completation: @escaping ( _ error: Error?, _ category: [Category]? )->() ) {
         AF.request(URLs.categories).responseJSON { (response) in
             do {
                 let json = try JSONDecoder().decode(Categories.self, from: response.data!)
@@ -29,14 +29,24 @@ class AnimeDataServices {
         let url = URLs.videos + String(categoryID)
         AF.request(url).responseJSON { (response) in
             do {
-                let jsonData = try JSONDecoder().decode(Videos.self, from: response.data!)
-                completation(nil, jsonData)
+                 let jsonData = try JSONDecoder().decode(Videos.self, from: response.data!)
+                 completation(nil, jsonData)
             } catch {
                 print(error)
             }
         }
     }
-    
+    class func getRelatedVideos(id: Int, completation: @escaping (_ error: Error?,_ related_videos: [Video]?) ->()){
+        let url = URLs.related_videos + "\(id)"
+        AF.request(url).responseJSON { (response) in
+            do {
+                let json = try JSONDecoder().decode(Videos.self, from: response.data!)
+                completation(nil, json)
+            } catch  {
+                print(error)
+            }
+        }
+    }
 }
 
 

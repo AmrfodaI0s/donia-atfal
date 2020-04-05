@@ -14,13 +14,14 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
         case 0:
             return videos?.count ?? 0
         case 1:
-            return 3
+            return related_videos?.count ?? 0
         default:
-            return videos?.count ?? 0
+            return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: "animeDetailCell", for: indexPath) as? AnimeDetailsCollectionViewCell else { return UICollectionViewCell() }
         cell.layer.cornerRadius = 12
@@ -35,14 +36,16 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
                 video_Time = 0.0
             }
             cell.episode.text = videos?[indexPath.row].name ?? "حلقة 0"
-            let time_text = getTime(time: video_Time)
+            let time_text = Helper.getTime(time: video_Time)
             cell.durationLabel.text = String(time_text)
-            let url = URL(string: videos?[indexPath.row].images?[0].image ?? "http://i3.ytimg.com/vi/L8-DxbbZm84/0.jpg")
+            let url = URL(string: videos?[indexPath.row].images?[0].image ?? "")
             cell.anime_iv.kf.setImage(with: url)
             //showCellAnimeTitle(cell: cell)
             return cell
         case 1:
             showHideAnimeCell(cell: cell, state: false)
+            let url = URL(string: related_videos?[indexPath.row].images?[0].image ?? "")
+            cell.anime_iv.kf.setImage(with: url)
             //hideCellAnimeTitle(cell: cell)
             return cell
         default:
@@ -65,14 +68,5 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 12, left: 24, bottom: 12, right: 24)
     }
-    func getTime(time : Float) -> String {
-        let hours = Int(time/3600)
-        let mints = Int(time/60) % 60
-        let seconds = Int(time.truncatingRemainder(dividingBy: 60))
-        if hours > 0 {
-            return "\(hours):\(mints):\(seconds)"
-        } else {
-            return "\(mints):\(seconds)"
-        }
-    }
+    
 }

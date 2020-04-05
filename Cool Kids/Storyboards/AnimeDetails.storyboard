@@ -197,17 +197,27 @@
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7S-gz-yFL" userLabel="swipeableView">
+                                                <rect key="frame" x="335" y="53" width="40" height="887"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="wOO-y1-Isl"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="m7S-gz-yFL" secondAttribute="bottom" constant="4" id="1ao-IX-XuW"/>
                                             <constraint firstAttribute="height" priority="999" constant="1500" id="7jT-OL-FDX"/>
                                             <constraint firstItem="anG-d8-onO" firstAttribute="leading" secondItem="sWc-n9-cxJ" secondAttribute="leading" id="ARi-Am-zhz"/>
                                             <constraint firstItem="Rg2-Va-7V4" firstAttribute="top" secondItem="sWc-n9-cxJ" secondAttribute="top" constant="168" id="BcO-l5-KUy"/>
                                             <constraint firstAttribute="trailing" secondItem="anG-d8-onO" secondAttribute="trailing" id="C2K-gt-2zP"/>
+                                            <constraint firstAttribute="trailing" secondItem="m7S-gz-yFL" secondAttribute="trailing" id="DW1-OQ-3dI"/>
                                             <constraint firstAttribute="trailing" secondItem="egf-xR-3e1" secondAttribute="trailing" id="Fh6-IT-wBK"/>
                                             <constraint firstItem="Rg2-Va-7V4" firstAttribute="leading" secondItem="sWc-n9-cxJ" secondAttribute="leading" id="GzY-zu-2dH"/>
                                             <constraint firstAttribute="trailing" secondItem="Ekg-Nv-7T5" secondAttribute="trailing" constant="25" id="HDo-ft-0bK"/>
                                             <constraint firstItem="egf-xR-3e1" firstAttribute="leading" secondItem="sWc-n9-cxJ" secondAttribute="leading" id="Kdr-mc-TzZ"/>
+                                            <constraint firstItem="m7S-gz-yFL" firstAttribute="top" secondItem="Ekg-Nv-7T5" secondAttribute="bottom" constant="4" id="Oqw-5h-AiK"/>
                                             <constraint firstItem="egf-xR-3e1" firstAttribute="top" secondItem="sWc-n9-cxJ" secondAttribute="top" id="Xly-Df-yzo"/>
                                             <constraint firstAttribute="trailing" secondItem="cW2-UU-eg3" secondAttribute="trailing" id="Z0y-9u-YTw"/>
                                             <constraint firstItem="anG-d8-onO" firstAttribute="top" secondItem="egf-xR-3e1" secondAttribute="bottom" id="ceE-Ek-V34"/>
@@ -243,9 +253,11 @@
                             <outlet property="backBtn" destination="Ekg-Nv-7T5" id="11z-tj-q1m"/>
                             <outlet property="collectionHeight" destination="6Ad-T5-joo" id="ubO-9e-pbr"/>
                             <outlet property="collectionView" destination="cW2-UU-eg3" id="lPl-O8-PJX"/>
+                            <outlet property="containerView" destination="sWc-n9-cxJ" id="d5j-yW-Yew"/>
                             <outlet property="eposidesCount_label" destination="eHZ-VN-hTD" id="EKW-C2-xvd"/>
                             <outlet property="releaseDate_label" destination="Jvk-q1-4vE" id="dzC-VG-sUX"/>
                             <outlet property="segmentController" destination="Liu-Wx-asy" id="lL3-Kc-OrS"/>
+                            <outlet property="swipeableView" destination="m7S-gz-yFL" id="LcC-Uv-ggZ"/>
                             <outlet property="viewCount_label" destination="CnF-J0-c9v" id="Z13-AO-wLV"/>
                         </connections>
                     </view>
