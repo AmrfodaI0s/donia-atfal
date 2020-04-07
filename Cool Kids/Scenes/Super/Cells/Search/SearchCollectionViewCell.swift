@@ -9,10 +9,35 @@
 import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var search_textfield: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        search_textfield.delegate = self
+    }
+    
+    @IBAction func serachBtnTapped(_ sender: UIButton) {
+        checkTextifEmpty()
     }
 
+}
+
+//MARK: - Search TextFiled Delegate methods
+extension SearchCollectionViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        search_textfield.text = ""
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        checkTextifEmpty()
+        return true
+    }
+    func checkTextifEmpty() {
+        if search_textfield.text!.isEmpty {
+            search_textfield.placeholder = "الرجاء ملئ هذا الحقل"
+        } else {
+            search_textfield.endEditing(true)
+            search_textfield.placeholder = ""
+        }
+    }
 }

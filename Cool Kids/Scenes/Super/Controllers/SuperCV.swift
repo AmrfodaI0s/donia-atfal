@@ -39,11 +39,22 @@ class SuperCV: UIViewController {
         self.title = "الرئيسية"
         self.navigationController?.viewWillLayoutSubviews()
     }
+    //MARK: -  get all categories using Alamofire
     func fetchCategories(){
         CategoryDataServices.getAllCategories { [weak self] (error, categories) in
         self?.categories = categories!
         self?.MainCollectionView.reloadData()
         SwiftSpinner.hide()           }
+    }
+    //MARK: -  get all categories using UrlSession
+    func fetchCategoriesAPI() {
+        API.getAllCategories  { [weak self] (error, categories) in
+            self?.categories = categories!
+            DispatchQueue.main.async {
+                self?.MainCollectionView.reloadData()
+                SwiftSpinner.hide()
+            }
+        }
     }
     //MARK: -  Load Categories data
     func getCategories(){
@@ -51,6 +62,7 @@ class SuperCV: UIViewController {
         if Reachability.isConnectedToNetwork() {
             SwiftSpinner.show("جاري التحميل", animated: true)
             fetchCategories()
+            //fetchCategoriesAPI()
         } else {
             Alert.noInternetConnection(self) {
                 self.getCategories()
