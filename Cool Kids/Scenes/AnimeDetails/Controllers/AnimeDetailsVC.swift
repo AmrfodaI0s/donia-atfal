@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftSpinner
 
 class AnimeDetailsVC: UIViewController {
     
@@ -33,36 +32,14 @@ class AnimeDetailsVC: UIViewController {
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         anime.segmentController?.setTitleTextAttributes(titleTextAttributes, for: .selected)
         anime.segmentController?.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+        
         //set IBAction of the {back  arrow button}
         anime.backBtn?.addTarget(self, action: #selector(backBtnPressed), for: .touchUpInside)
     }
     override func viewWillAppear(_ animated: Bool) {
-        fetchVideos()
+        getVideosIfConnected()
     }
-    //MARK: - get Videos if isConnectedToNetwork
-    func fetchVideos(){
-        if Reachability.isConnectedToNetwork(){
-            //get all videos for selected categories
-            SwiftSpinner.show("loading", animated: true)
-            handleVideos()
-            handlRelatedVideos()
-            SwiftSpinner.hide()
-        } else {
-            Alert.noInternetConnection(self) {
-                self.fetchVideos()
-            }
-//           let alert = UIAlertController(title: "حدث خطأ", message: "لا يوجد اتصال بالانترنت", preferredStyle: .alert)
-//                  let cancel = UIAlertAction(title: "إغلاق", style: .cancel) { (UIAlertAction) in
-//                      print("No internet connection")
-//                  }
-//                  let retry = UIAlertAction(title: "حاول مجدد", style: .default) { (UIAlertAction) in
-//                    self.fetchVideos()
-//                  }
-//                  alert.addAction(cancel)
-//                  alert.addAction(retry)
-//                  present(alert, animated: true, completion: nil)
-        }
-    }
+    
     @objc func backBtnPressed() {
         dismissFromRight()
     }
@@ -85,6 +62,52 @@ class AnimeDetailsVC: UIViewController {
     override func viewWillLayoutSubviews() {
         resizeHeight()
     }
+    
+    
+} // end class AnimeDetailsVC
+
+
+//MARK: - Extention - API Fetching Methods
+extension AnimeDetailsVC {
+    
+    //MARK: - get Videos if isConnectedToNetwork
+    func getVideosIfConnected(){
+        if Reachability.isConnectedToNetwork(){
+            Helper.showSpinner(onView: view)
+            //get all videos for selected categories
+            handleVideos()
+            handlRelatedVideos()
+            Helper.removeSpinner()
+        } else {
+            Alert.noInternetConnection(self) {
+                self.getVideosIfConnected()
+            }
+        }
+    }
+    
+    //MARK: - get all videos by category id
+    func handleVideos() {
+        API.getAnimeByID(categoryID: self.selected_anime?.id ?? 80) { (error, videos) in
+            self.videos = videos
+            DispatchQueue.main.async {
+                self.anime.collectionView?.reloadData()
+            }
+        }
+    }
+    
+    //MARK: - get all related videos by category id
+    func handlRelatedVideos() {
+        API.getRelatedVideos(id: selected_anime?.id ?? 0) { (error, videos) in
+            self.related_videos = videos
+            DispatchQueue.main.async {
+                self.anime.collectionView?.reloadData()
+            }
+        }
+    }
+}
+//MARK: -  Extention - set Layout & data for CollectionView Cells
+extension AnimeDetailsVC {
+    
     //MARK: -  configure collection view that hold all videos of segment controll
     func configureCollection() {
         anime.collectionView?.delegate = self
@@ -98,21 +121,6 @@ class AnimeDetailsVC: UIViewController {
     }
     
     //MARK: - Show and Hide AnimeCell Title Attributes
-    //unused function
-    func hideCellAnimeTitle(cell: AnimeDetailsCollectionViewCell) {
-        cell.durationLabel.isHidden =  true
-        cell.title_view.isHidden = true
-        cell.episode.isHidden = true
-        cell.duration_view.isHidden = true
-    }
-    //unused function
-    func showCellAnimeTitle(cell: AnimeDetailsCollectionViewCell,_ indexPath: Int) {
-        cell.durationLabel.isHidden =  false
-        cell.title_view.isHidden = false
-        cell.episode.isHidden = false
-        cell.duration_view.isHidden = false
-    }
-    
     func setAnimeLayoutData() {
         anime.animeTitleLabel?.text = selected_anime?.name
         anime.viewCount_label?.text = String(selected_anime?.videosViews ?? 0)
@@ -128,22 +136,4 @@ class AnimeDetailsVC: UIViewController {
         cell.episode.isHidden = state ? false : true
         cell.duration_view.isHidden = state ? false : true
     }
-    //MARK: - get all videos by category id
-    func handleVideos() {
-            AnimeDataServices.getAnimeByID(categoryID: self.selected_anime?.id ?? 80) { (error, videos) in
-                self.videos = videos
-                self.anime.collectionView?.reloadData()
-            }
-    }
-    //MARK: - get all related videos by category id
-    func handlRelatedVideos() {
-            AnimeDataServices.getRelatedVideos(id: selected_anime?.id ?? 0) { (error, videos) in
-                self.related_videos = videos
-                self.anime.collectionView?.reloadData()
-            }
-            print(self.related_videos?.count ?? 0)
-    }
-} // end class AnimeDetailsVC
-
-
-
+}
