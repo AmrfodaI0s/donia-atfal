@@ -11,6 +11,8 @@ import Lottie
 
 class MainVC: UIViewController {
     
+    var selected_item = 9
+    let lottie_json = "bus"
     @IBOutlet weak var splach_view: AnimationView!
     @IBOutlet weak var startBtnTapped: UIButton!
     @IBOutlet weak var splash_label: UILabel!
@@ -23,7 +25,7 @@ class MainVC: UIViewController {
         Helper.saveUserDefaults(height: self.view.frame.size.height)
         
         //MARK: - Invoke Lottie Animation method
-        setLottieAnimation()
+        Helper.setLottieAnimation(splach_view: splach_view, lottie_json)
         // hide all the layout when the lottie view is running
         showHideSplashLayout(state: true, color: #colorLiteral(red: 0.2078431373, green: 0.2274509804, blue: 0.3137254902, alpha: 1))
         //MARK: - Timer to show all layouts since lottie is loaded
@@ -48,14 +50,18 @@ extension MainVC {
         splach_view.isHidden = state ? false : true
         view.backgroundColor = color
     }
-    //MARK: - declare lottie's settings
-    func setLottieAnimation() {
-        // set the lottie's json file-name
-        let animation = Animation.named("bus")
-        splach_view.animation = animation
-        splach_view.layer.cornerRadius = 25
-        splach_view.animationSpeed = 1
-        splach_view.play()
+ 
+    
+}
+//MARK: - BaseController For NavigationController Views
+extension MainVC: UIGestureRecognizerDelegate {
+    
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
 }

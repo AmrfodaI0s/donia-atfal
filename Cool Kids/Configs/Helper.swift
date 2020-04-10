@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class Helper {
     static var vSpinner : UIView?
@@ -63,6 +64,15 @@ class Helper {
             return "\(mints):\(seconds)"
         }
     }
+    //MARK: - declare lottie's settings
+    class func setLottieAnimation(splach_view : AnimationView ,_ json_name: String) {
+         // set the lottie's json file-name
+         let animation = Animation.named(json_name)
+         splach_view.animation = animation
+         splach_view.layer.cornerRadius = 25
+         splach_view.animationSpeed = 1
+         splach_view.play()
+     }
 
 } // end of Helper class
 
