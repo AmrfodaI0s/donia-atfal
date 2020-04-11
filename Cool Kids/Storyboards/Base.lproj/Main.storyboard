@@ -25,9 +25,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsy-yS-w2t">
-                                <rect key="frame" x="90" y="585" width="195" height="50"/>
+                                <rect key="frame" x="151.5" y="1167" width="72" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="aXv-nk-7pJ"/>
                                     <constraint firstAttribute="height" constant="50" id="lOb-xQ-IyW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="22"/>
@@ -41,10 +42,10 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أول تطبيق لمشاهدة أفلام الكرتون" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRr-X5-LZX">
-                                <rect key="frame" x="62.5" y="228" width="250" height="91"/>
+                                <rect key="frame" x="62" y="-516.5" width="251" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="jjU-ov-nyQ"/>
-                                    <constraint firstAttribute="height" constant="91" id="qKb-If-mJS"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="255" id="jjU-ov-nyQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="qKb-If-mJS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,36 +53,37 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLU-Je-zEA" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="65.5" y="213.5" width="244" height="240"/>
+                                <rect key="frame" x="24" y="209.5" width="327" height="248"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Kv6-hq-fcz"/>
-                                    <constraint firstAttribute="width" constant="244" id="kHp-xh-lLR"/>
+                                    <constraint firstAttribute="height" constant="248" id="Kv6-hq-fcz"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="jLU-Je-zEA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="0ER-7U-94w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7YQ-GA-o28" secondAttribute="trailing" id="1dX-Co-TM6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hsy-yS-w2t" secondAttribute="trailing" priority="700" constant="90" id="3zm-2L-noP"/>
                             <constraint firstItem="7YQ-GA-o28" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4NG-MF-bWf"/>
                             <constraint firstItem="jLU-Je-zEA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NcB-xt-Ywt"/>
-                            <constraint firstItem="KRr-X5-LZX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="Pd9-gU-xhE"/>
-                            <constraint firstItem="jLU-Je-zEA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UjY-cZ-pql"/>
-                            <constraint firstItem="hsy-yS-w2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Y7J-b8-CGr"/>
+                            <constraint firstItem="KRr-X5-LZX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-800" id="Pd9-gU-xhE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLU-Je-zEA" secondAttribute="trailing" constant="24" id="Uv1-ep-yJm"/>
                             <constraint firstItem="hsy-yS-w2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="axc-1F-R37"/>
                             <constraint firstItem="KRr-X5-LZX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blv-ir-hxc"/>
                             <constraint firstAttribute="bottom" secondItem="7YQ-GA-o28" secondAttribute="bottom" id="ckn-kn-xYg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hsy-yS-w2t" secondAttribute="bottom" constant="32" id="nmK-lQ-3In"/>
+                            <constraint firstAttribute="bottom" secondItem="hsy-yS-w2t" secondAttribute="top" constant="-500" id="nmK-lQ-3In"/>
                             <constraint firstItem="7YQ-GA-o28" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pgH-oW-KVh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="StartBtnYConstraint" destination="nmK-lQ-3In" id="VAi-SE-Bvf"/>
+                        <outlet property="labelCenterYConstraints" destination="Pd9-gU-xhE" id="9Di-DX-bsN"/>
                         <outlet property="splach_view" destination="jLU-Je-zEA" id="JUC-36-hZ1"/>
                         <outlet property="splash_label" destination="KRr-X5-LZX" id="aiA-2g-JSm"/>
                         <outlet property="startBtnTapped" destination="hsy-yS-w2t" id="A3g-YW-RlD"/>
+                        <outlet property="startBtnWidthConstraints" destination="aXv-nk-7pJ" id="a7o-gd-Pca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

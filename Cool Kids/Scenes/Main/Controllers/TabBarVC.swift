@@ -18,8 +18,6 @@ class TabBarVC: UITabBarController {
         self.tabBar.frame.size.height = 64
         self.selectedIndex = 2
         self.tabBarItem.badgeColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-        //self.tabBar.tintColor = .blue
-        //self.tabBar.barTintColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         self.tabBar.layer.cornerRadius = 20
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.tabBar.layer.masksToBounds = true
