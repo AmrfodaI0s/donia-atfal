@@ -18,3 +18,6 @@ class BaseView: UIView {
            super.init(coder: aDecoder)
        }
 }
+class RoundedView: UIView {
+    
+}

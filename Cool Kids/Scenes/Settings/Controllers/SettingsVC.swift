@@ -10,27 +10,20 @@ import UIKit
  
 class SettingsVC: UIViewController {
     
-    //Outlets
-    @IBOutlet var MainView: UIView!
-    @IBOutlet weak var NotificationView: UIView!
-    @IBOutlet weak var NightModeView: UIView!
-    @IBOutlet weak var ShareView: UIView!
-    @IBOutlet weak var RateView: UIView!
-    @IBOutlet weak var SettingsLabel: UILabel!
-    @IBOutlet weak var NotificationLabel: UILabel!
-    @IBOutlet weak var NightModeLabel: UILabel!
-    @IBOutlet weak var AboutLabel: UILabel!
-    @IBOutlet weak var ShareLabel: UILabel!
-    @IBOutlet weak var RateLabel: UILabel!
-    @IBOutlet weak var ShareImage: UIImageView!
-    @IBOutlet weak var RateImage: UIImageView!
-    @IBOutlet weak var Notification_Switch: UISwitch!
-    @IBOutlet weak var NightMode_Switch: UISwitch!
+    @IBOutlet var settingsView: SettingsView!
     
     //MARK: - ViewDidLoad - viewDidDisappear - viewWillAppear
     override func viewDidLoad() {
         super.viewDidLoad()
-        Add_Share_Gesture()
+        
+        if let switching = settingsView.NightMode_Switch {
+            switching.addTarget(self, action: #selector(switchNightMode(_:)), for: .valueChanged)
+        }
+        if let sharebtn = settingsView.ShareBtn {
+            sharebtn.addTarget(self, action: #selector(shareApp), for: .touchUpInside)
+        }
+        
+
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -39,17 +32,13 @@ class SettingsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "الاعدادات"
+        Theme_Color()
+
     }
 
     
-    //MARK: - Adding Gestures To Views
-    private func Add_Share_Gesture() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(share_app))
-        ShareView.addGestureRecognizer(gesture)
-    }
-    
     //MARK: - Share App
-    @objc func share_app() {
+    @objc func shareApp() {
         view.isUserInteractionEnabled = false
         let url = "https://www.youtube.com/watch?v=8JSdy3nLLYA&list=PLVYplv54QxwBDYx_QJ267WyFoNrWMFBYv&index=6&t=0s"
         let activitycontroller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
@@ -58,25 +47,30 @@ class SettingsVC: UIViewController {
     }
     
     //MARK: - Notification Switch
-    @IBAction func NotificationSwitch(_ sender: UISwitch) {
+    @objc func switchNightMode(_ sender: UISwitch) {
         if sender.isOn == true {
-            print("Notification ON")
-            //Notification_Switch.thumbTintColor = Theme.current.Episode_Detail
+            settingsView.NightMode_Switch?.thumbTintColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+           Theme.current = Dark_Theme()
+            settingsView.NightMode_Switch?.thumbTintColor = Theme.current.Episode_Detail
+            navigationController?.navigationBar.barStyle = .default
         } else {
-            print("Notification OFF")
-            //Notification_Switch.thumbTintColor = Theme.current.R_Text
+            settingsView.NightMode_Switch?.thumbTintColor = #colorLiteral(red: 0.7877369523, green: 0.7877556682, blue: 0.7877456546, alpha: 1)
+            Theme.current = Light_Theme()
+            settingsView.NightMode_Switch?.thumbTintColor = Theme.current.R_Text
+            navigationController?.navigationBar.barStyle = .black
         }
+        viewWillAppear(true)
     }
     
     //MARK: - Night Mode Switch
-    @IBAction func NightModeSwitch(_ sender: UISwitch) {
+    @objc func NotificationSwitch(_ sender: UISwitch) {
         if sender.isOn == true {
             Theme.current = Dark_Theme()
-            NightMode_Switch.thumbTintColor = Theme.current.Episode_Detail
+            settingsView.NightMode_Switch?.thumbTintColor = Theme.current.Episode_Detail
             navigationController?.navigationBar.barStyle = .default
         } else {
             Theme.current = Light_Theme()
-            NightMode_Switch.thumbTintColor = Theme.current.R_Text
+            settingsView.NightMode_Switch?.thumbTintColor = Theme.current.R_Text
             navigationController?.navigationBar.barStyle = .black
         }
         viewWillAppear(true)
@@ -85,10 +79,42 @@ class SettingsVC: UIViewController {
     
     //MARK: - Theme Colors
     private func Theme_Color() {
- print(90)
+        //BG
+        settingsView.backgroundColor = Theme.current.BG_Color
+        //Labels
+        settingsView.AboutLabel?.textColor = Theme.current.White_Text
+        settingsView.ShareLabel?.textColor = Theme.current.White_Text
+        settingsView.RateLabel?.textColor = Theme.current.White_Text
+        settingsView.SettingsLabel?.textColor = Theme.current.White_Text
+        settingsView.NotificationLabel?.textColor = Theme.current.White_Text
+        settingsView.NightModeLabel?.textColor = Theme.current.White_Text
+        //Views
+        settingsView.NightModeView?.backgroundColor = Theme.current.Settings_Views
+        settingsView.NotificationView?.backgroundColor = Theme.current.Settings_Views
+        settingsView.ShareView?.backgroundColor = Theme.current.Settings_Views
+        settingsView.RateView?.backgroundColor = Theme.current.Settings_Views
+        //Images
+        settingsView.ShareBtn?.tintColor = Theme.current.Image_Tint
+        settingsView.RateBtn?.tintColor = Theme.current.Image_Tint
+        //Switches
+        settingsView.Notification_Switch?.onTintColor = Theme.current.Switch_Back_On
+        settingsView.Notification_Switch?.tintColor = Theme.current.Switch_back
+        if settingsView.Notification_Switch?.isOn == true {
+            settingsView.Notification_Switch?.thumbTintColor = Theme.current.Episode_Detail
+        } else {
+            settingsView.Notification_Switch?.thumbTintColor = Theme.current.R_Text
+        }
+        if settingsView.NightMode_Switch?.isOn == true {
+            settingsView.NightMode_Switch?.thumbTintColor = Theme.current.Episode_Detail
+        } else {
+            settingsView.NightMode_Switch?.thumbTintColor = Theme.current.R_Text
+        }
+        settingsView.NightMode_Switch?.onTintColor = Theme.current.Switch_Back_On
+        settingsView.NightMode_Switch?.tintColor = Theme.current.Switch_back
+        //TabBar
+        self.tabBarController?.tabBar.barTintColor = Theme.current.Settings_Views
+
     }
-    
-    
     
 }
 
