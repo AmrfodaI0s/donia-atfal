@@ -8,7 +8,7 @@
 
 import UIKit
 import Lottie
-
+import Kingfisher
 class Helper {
     static var vSpinner : UIView?
     
@@ -25,6 +25,7 @@ class Helper {
             view.addSubview(overView)
         }
     }
+    
     //MARK: -  Show and Hide Spinner
     class func showSpinner(onView : UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
@@ -46,6 +47,7 @@ class Helper {
             self.vSpinner = nil
         }
     }
+    
     //MARK: -  save Device FrameHeight to UserDefault
     class func saveUserDefaults(height : CGFloat) {
         let userDefault = UserDefaults.standard
@@ -64,6 +66,7 @@ class Helper {
             return "\(mints):\(seconds)"
         }
     }
+    
     //MARK: - declare lottie's settings
     class func setLottieAnimation(splach_view : AnimationView ,_ json_name: String) {
          // set the lottie's json file-name
@@ -73,7 +76,13 @@ class Helper {
          splach_view.animationSpeed = 1
          splach_view.play()
      }
-
+    
+    //MARK: -  Set Image by url - KF
+    class func displayImage(imageView: UIImageView?, url: String) {
+        let Url = url.hasPrefix("http") ? url : URLs.imageRequestURL + url
+        imageView?.kf.indicatorType = .activity
+        imageView?.kf.setImage(with: URL(string : Url ), options: [.transition(.flipFromRight(0.3))])
+    }
 } // end of Helper class
 
 

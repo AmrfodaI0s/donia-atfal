@@ -270,9 +270,118 @@
             </objects>
             <point key="canvasLocation" x="-871.20000000000005" y="-237.48125937031486"/>
         </scene>
+        <!--VideoVC-->
+        <scene sceneID="sbY-R2-xkF">
+            <objects>
+                <viewController storyboardIdentifier="videoVC" id="L3S-YS-By7" customClass="VideoVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V5f-mF-aWH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-0i-b1P" userLabel="Video View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EQW-Xb-ObB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مسلسل كونان  - الحلقة الاولى" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ju-Lm-6rv">
+                                <rect key="frame" x="56" y="212" width="295" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Ul4-e7-szn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIP-dU-GXv">
+                                <rect key="frame" x="24" y="212" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="GP0-BZ-Bdf"/>
+                                    <constraint firstAttribute="width" constant="24" id="MRq-C1-j2n"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="favorite_dim"/>
+                                <connections>
+                                    <action selector="likeButtonPressed:" destination="L3S-YS-By7" eventType="touchUpInside" id="O9S-nP-bsg"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YF3-PC-3yF">
+                                <rect key="frame" x="24" y="255" width="327" height="1"/>
+                                <color key="backgroundColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="zTq-gx-WTz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التالي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fn-xO-OtP">
+                                <rect key="frame" x="315.5" y="269" width="35.5" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="eFD-yT-C2A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faj-IA-Gt4">
+                                <rect key="frame" x="24" y="269" width="51" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="YrP-R8-1I6"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تشغيل تلقائي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh9-aF-fcp">
+                                <rect key="frame" x="85" y="269" width="98" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="EeN-Un-dGH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-UI-AQN">
+                                <rect key="frame" x="0.0" y="308" width="375" height="359"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZNU-UI-AQN" firstAttribute="top" secondItem="vh9-aF-fcp" secondAttribute="bottom" constant="12" id="5Dn-1R-nxa"/>
+                            <constraint firstItem="h6P-0i-b1P" firstAttribute="leading" secondItem="wd8-NN-df3" secondAttribute="leading" id="5H6-Ca-4k5"/>
+                            <constraint firstItem="YF3-PC-3yF" firstAttribute="leading" secondItem="wd8-NN-df3" secondAttribute="leading" constant="24" id="AMa-HY-lm7"/>
+                            <constraint firstItem="faj-IA-Gt4" firstAttribute="top" secondItem="YF3-PC-3yF" secondAttribute="bottom" constant="13" id="APh-Op-zEw"/>
+                            <constraint firstItem="h6P-0i-b1P" firstAttribute="top" secondItem="wd8-NN-df3" secondAttribute="top" id="CeW-V8-edA"/>
+                            <constraint firstItem="4ju-Lm-6rv" firstAttribute="leading" secondItem="JIP-dU-GXv" secondAttribute="trailing" constant="8" id="FTo-3L-iqb"/>
+                            <constraint firstItem="7fn-xO-OtP" firstAttribute="top" secondItem="YF3-PC-3yF" secondAttribute="bottom" constant="13" id="Hpn-v0-IpG"/>
+                            <constraint firstItem="wd8-NN-df3" firstAttribute="trailing" secondItem="h6P-0i-b1P" secondAttribute="trailing" id="HrL-gN-aMN"/>
+                            <constraint firstItem="wd8-NN-df3" firstAttribute="trailing" secondItem="YF3-PC-3yF" secondAttribute="trailing" constant="24" id="Jza-ab-ntG"/>
+                            <constraint firstItem="4ju-Lm-6rv" firstAttribute="top" secondItem="h6P-0i-b1P" secondAttribute="bottom" constant="12" id="LV9-ux-aUG"/>
+                            <constraint firstItem="JIP-dU-GXv" firstAttribute="leading" secondItem="wd8-NN-df3" secondAttribute="leading" constant="24" id="Mpx-B8-IY1"/>
+                            <constraint firstItem="YF3-PC-3yF" firstAttribute="top" secondItem="4ju-Lm-6rv" secondAttribute="bottom" constant="16" id="NfZ-48-jmz"/>
+                            <constraint firstItem="ZNU-UI-AQN" firstAttribute="leading" secondItem="V5f-mF-aWH" secondAttribute="leading" id="Uq6-gw-N4s"/>
+                            <constraint firstItem="wd8-NN-df3" firstAttribute="trailing" secondItem="7fn-xO-OtP" secondAttribute="trailing" constant="24" id="WEI-gQ-zaq"/>
+                            <constraint firstItem="faj-IA-Gt4" firstAttribute="leading" secondItem="wd8-NN-df3" secondAttribute="leading" constant="24" id="XCy-Pt-j8b"/>
+                            <constraint firstItem="JIP-dU-GXv" firstAttribute="top" secondItem="h6P-0i-b1P" secondAttribute="bottom" constant="12" id="e8T-NE-WIK"/>
+                            <constraint firstAttribute="trailing" secondItem="ZNU-UI-AQN" secondAttribute="trailing" id="j12-eQ-zJ5"/>
+                            <constraint firstItem="wd8-NN-df3" firstAttribute="trailing" secondItem="4ju-Lm-6rv" secondAttribute="trailing" constant="24" id="j1d-FN-8nl"/>
+                            <constraint firstItem="vh9-aF-fcp" firstAttribute="centerY" secondItem="7fn-xO-OtP" secondAttribute="centerY" id="lLH-ZA-3rR"/>
+                            <constraint firstAttribute="bottom" secondItem="ZNU-UI-AQN" secondAttribute="bottom" id="le2-1M-hKv"/>
+                            <constraint firstItem="vh9-aF-fcp" firstAttribute="leading" secondItem="faj-IA-Gt4" secondAttribute="trailing" constant="12" id="sJP-zy-oHH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wd8-NN-df3"/>
+                    </view>
+                    <connections>
+                        <outlet property="episode_label" destination="4ju-Lm-6rv" id="Q4f-9y-G0r"/>
+                        <outlet property="tableView" destination="ZNU-UI-AQN" id="41e-cm-qKT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uR5-El-UZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="-612"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back_white" width="24" height="24"/>
         <image name="conan" width="256" height="144"/>
+        <image name="favorite_dim" width="24" height="24"/>
     </resources>
 </document>

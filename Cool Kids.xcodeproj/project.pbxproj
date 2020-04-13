@@ -19,6 +19,11 @@
 		AABA3F0423F2002000E60659 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA3F0323F2002000E60659 /* download.png */; };
 		AABC7F6B24397D1600907D65 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC7F6A24397D1600907D65 /* AlertMessages.swift */; };
 		AABF19EC24353FAD00B09194 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABF19EB24353FAD00B09194 /* Video.swift */; };
+		AAC76AD12442DE1A007EFBDB /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC76AD02442DE1A007EFBDB /* VideoVC.swift */; };
+		AAC76AD424430E9F007EFBDB /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC76AD324430E9F007EFBDB /* PresentationController.swift */; };
+		AAC975CA2444E876007C5C6F /* VideoVC + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC975C92444E876007C5C6F /* VideoVC + TableView.swift */; };
+		AAC975CE2444EA0D007C5C6F /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC975CC2444EA0D007C5C6F /* VideoTableViewCell.swift */; };
+		AAC975CF2444EA0D007C5C6F /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC975CD2444EA0D007C5C6F /* VideoTableViewCell.xib */; };
 		AAD1A1FB24309D27006320C0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1A1FA24309D27006320C0 /* BaseView.swift */; };
 		AAD1A1FE2430A0E3006320C0 /* AnimeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1A1FD2430A0E3006320C0 /* AnimeDetailsView.swift */; };
 		AAD1C4CA24411B1800B715FF /* Dark_Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1C4C624411B1800B715FF /* Dark_Theme.swift */; };
@@ -77,6 +82,11 @@
 		AABA3F0323F2002000E60659 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		AABC7F6A24397D1600907D65 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 		AABF19EB24353FAD00B09194 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		AAC76AD02442DE1A007EFBDB /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
+		AAC76AD324430E9F007EFBDB /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		AAC975C92444E876007C5C6F /* VideoVC + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoVC + TableView.swift"; sourceTree = "<group>"; };
+		AAC975CC2444EA0D007C5C6F /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		AAC975CD2444EA0D007C5C6F /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		AAD1A1FA24309D27006320C0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AAD1A1FD2430A0E3006320C0 /* AnimeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsView.swift; sourceTree = "<group>"; };
 		AAD1C4C624411B1800B715FF /* Dark_Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dark_Theme.swift; sourceTree = "<group>"; };
@@ -205,6 +215,34 @@
 			path = AnimeDataServices;
 			sourceTree = "<group>";
 		};
+		AAC76ACE2442DDB3007EFBDB /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				AAC76ACF2442DDEF007EFBDB /* Controllers */,
+				AAC975CB2444E9DB007C5C6F /* Cells */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		AAC76ACF2442DDEF007EFBDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAC76AD02442DE1A007EFBDB /* VideoVC.swift */,
+				AAC975C92444E876007C5C6F /* VideoVC + TableView.swift */,
+				AAC76AD324430E9F007EFBDB /* PresentationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AAC975CB2444E9DB007C5C6F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AAC975CC2444EA0D007C5C6F /* VideoTableViewCell.swift */,
+				AAC975CD2444EA0D007C5C6F /* VideoTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		AAD1A1FC2430A0AA006320C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +368,7 @@
 				EFD5F54823F4236600E08C56 /* Favorite */,
 				EFD5F54C23F4260E00E08C56 /* Settings */,
 				EF1F2A1324224EA700D2ACB5 /* AnimeDetails */,
+				AAC76ACE2442DDB3007EFBDB /* Video */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -554,6 +593,7 @@
 				AA44FE832429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib in Resources */,
 				EFB6340F241F830800E04818 /* SuperVC.storyboard in Resources */,
 				AAE64D742440134E0073D156 /* bus.json in Resources */,
+				AAC975CF2444EA0D007C5C6F /* VideoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC975CA2444E876007C5C6F /* VideoVC + TableView.swift in Sources */,
 				EF71F73323F16362007BE84D /* MainVC.swift in Sources */,
 				EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */,
 				EFD9F43224211C9F00D1C686 /* ContentCollectionViewCell.swift in Sources */,
@@ -618,6 +659,8 @@
 				AA44FE7D242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift in Sources */,
 				EFB6341D241FB7EF00E04818 /* SearchCollectionViewCell.swift in Sources */,
 				EFD5F54B23F423B300E08C56 /* FavoriteVC.swift in Sources */,
+				AAC76AD12442DE1A007EFBDB /* VideoVC.swift in Sources */,
+				AAC975CE2444EA0D007C5C6F /* VideoTableViewCell.swift in Sources */,
 				EFD9F42D2421073800D1C686 /* AnimeCollectionViewCell.swift in Sources */,
 				AA591156242D469100E5172F /* AnimeDataServices.swift in Sources */,
 				AAD1C4CD24411B1800B715FF /* ThemePr.swift in Sources */,
@@ -633,6 +676,7 @@
 				AAE4027A23F34AEB00489F84 /* SuperCV.swift in Sources */,
 				AAE4027C23F3563600489F84 /* TabBarVC.swift in Sources */,
 				AA591150242D3C3700E5172F /* Reachability.swift in Sources */,
+				AAC76AD424430E9F007EFBDB /* PresentationController.swift in Sources */,
 				EFD5F55023F4267F00E08C56 /* SettingsVC.swift in Sources */,
 				EFD9F4282420D5E300D1C686 /* SliderPhotoCollectionViewCell.swift in Sources */,
 				EF0F464623FD844B00B00A2B /* Helper.swift in Sources */,

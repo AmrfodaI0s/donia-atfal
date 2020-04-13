@@ -14,9 +14,9 @@ class AnimeDetailsVC: UIViewController {
     var selected_anime : Category?
     var videos: Videos?
     var related_videos: Videos?
-    var related_videos_count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //swipeFromRight()
         SwipeBack()
         //set attributes for the labels and Images from the fetched data

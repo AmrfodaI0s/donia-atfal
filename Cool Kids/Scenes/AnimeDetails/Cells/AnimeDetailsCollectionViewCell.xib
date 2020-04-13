@@ -86,7 +86,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XJA-jE-5w1">
-                        <rect key="frame" x="112" y="69" width="36" height="35"/>
+                        <rect key="frame" x="112" y="54" width="36" height="35"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="ay3-mL-cAm"/>
@@ -102,7 +102,7 @@
                 <constraint firstItem="1Ey-7p-0bN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PoL-Fm-kh4"/>
                 <constraint firstAttribute="bottom" secondItem="1Ey-7p-0bN" secondAttribute="bottom" id="QyR-xu-P9x"/>
                 <constraint firstItem="d83-mV-Gzw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Sto-35-E5a"/>
-                <constraint firstItem="XJA-jE-5w1" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="VbC-Zj-8zG"/>
+                <constraint firstItem="XJA-jE-5w1" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-15" id="VbC-Zj-8zG"/>
                 <constraint firstAttribute="trailing" secondItem="d83-mV-Gzw" secondAttribute="trailing" id="Y9j-81-tzb"/>
                 <constraint firstItem="1Ey-7p-0bN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="byz-a5-Xb1"/>
                 <constraint firstItem="XJA-jE-5w1" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tqc-oB-ARM"/>

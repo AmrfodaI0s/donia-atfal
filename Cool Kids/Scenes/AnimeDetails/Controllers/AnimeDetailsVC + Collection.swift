@@ -7,7 +7,8 @@
 //
 import UIKit
 extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
-  
+    
+    //MARK: - Cells Count
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let segmentIndex = anime.segmentController?.selectedSegmentIndex
         switch segmentIndex {
@@ -19,7 +20,7 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
             return 0
         }
     }
-    
+    //MARK: - Cell Data
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView
@@ -38,8 +39,9 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
             cell.episode.text = videos?[indexPath.row].name ?? "حلقة 0"
             let time_text = Helper.getTime(time: video_Time)
             cell.durationLabel.text = String(time_text)
-            let url = URL(string: videos?[indexPath.row].images?[0].image ?? "")
-            cell.anime_iv.kf.setImage(with: url)
+            let url =  videos?[indexPath.row].images?[0].image ?? ""
+            Helper.displayImage(imageView: cell.anime_iv, url: url )
+            //cell.anime_iv.kf.setImage(with: url)
             //showCellAnimeTitle(cell: cell)
             return cell
         case 1:
@@ -53,6 +55,7 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
             return cell
         }
     }
+    //MARK: - Cell Size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let segmentIndex = anime.segmentController?.selectedSegmentIndex
         switch segmentIndex {
@@ -65,8 +68,23 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
                 - 48, height: 162)
         }
     }
+    //MARK: - Cell Edge Insets
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 12, left: 24, bottom: 12, right: 24)
     }
-    
+    //MARK: - Did Select Cell
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard.init(name: "AnimeDetails", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "videoVC") as? VideoVC else {return}
+        if videos?[indexPath.row] != nil {
+            vc.selectedVideo = videos?[indexPath.row]
+            vc.related_videos = related_videos
+        }
+        else { return }
+        self.presentAsSheet(vc, height: view.frame.height)
+    }
+    @objc func presentPressed() {
+        presentAsSheet(VideoVC(), height: 600)
+    }
 }
+

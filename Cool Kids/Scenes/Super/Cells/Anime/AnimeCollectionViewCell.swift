@@ -37,7 +37,7 @@ extension AnimeCollectionViewCell: UICollectionViewDelegate , UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cell_ID, for: indexPath) as? ContentCollectionViewCell else { return UICollectionViewCell() }
         cell.iv.layer.cornerRadius = 12
-        cell.displayImage(url: categories[indexPath.row].image!)
+        Helper.displayImage(imageView: cell.iv , url: categories[indexPath.row].image!)
         return cell
     }
     
