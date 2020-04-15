@@ -54,14 +54,4 @@ extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayou
         return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
     }
     
-    //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    //        let index = Int( self.sliderCollectionView.contentOffset.x / self.xx.frame.width )
-    //        xx.currentPage = index
-    //    }
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    //        <#code#>
-    //    }
-    //
-    
-    
 }

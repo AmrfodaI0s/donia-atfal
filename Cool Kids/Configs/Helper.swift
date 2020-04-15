@@ -19,7 +19,6 @@ class Helper {
         } else {
             let overView = UIView()
             overView.frame = UIApplication.shared.statusBarFrame
-            //overView.frame = (view.window?.windowScene?.statusBarManager?.statusBarFrame) ??  UIView().frame
             overView.backgroundColor = withColor
             overView.tag = tag
             view.addSubview(overView)
@@ -85,6 +84,15 @@ class Helper {
     }
 } // end of Helper class
 
-
+/*
+ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+     if let touch = touches.first {
+         if touch.view == video_view {
+             print("video view begins")
+             videoConfig()
+         }
+     }
+ }
+ */
 
 
