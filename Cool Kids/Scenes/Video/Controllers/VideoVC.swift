@@ -10,6 +10,8 @@ import UIKit
 import AVKit
 class VideoVC: UIViewController {
     
+  
+
     @IBOutlet var videoView: VideoView!
     //Variables & Objects
     let url = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
@@ -40,7 +42,7 @@ class VideoVC: UIViewController {
                 }
                 self.videoView.RecommendedCollection.reloadData()
             } else {
-                portraitHeight = 188
+                portraitHeight = 100
                 portraitWidth = portraitFrameHeight
                 if let flowLayout = videoView.RecommendedCollection.collectionViewLayout as? UICollectionViewFlowLayout {
                     flowLayout.scrollDirection = .horizontal

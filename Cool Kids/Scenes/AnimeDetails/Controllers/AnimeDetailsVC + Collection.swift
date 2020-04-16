@@ -73,6 +73,8 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard.init(name: "AnimeDetails", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "videoVC") as? VideoVC else {return}
+        vc.modalPresentationStyle = .fullScreen
+
         let segmentIndex = anime.segmentController?.selectedSegmentIndex
         
         switch segmentIndex {
@@ -83,10 +85,14 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
         default:
             print("err didSelect")
         }
-        self.presentAsSheet(vc, height: view.frame.height)
+        //
+        self.present(vc, animated: true)
+        //self.presentAsSheet(vc, height: view.frame.height)
     }
+    
     //MARK: - Move to VideoVC using PresentationController
     @objc func presentPressed() {
+        //let height = view.frame.height - 400
         presentAsSheet(VideoVC(), height: 600)
     }
     //MARK: -  define which video didSelect in which Segment 0 || 1

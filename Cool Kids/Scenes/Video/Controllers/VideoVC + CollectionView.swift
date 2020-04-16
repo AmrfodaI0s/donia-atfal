@@ -28,15 +28,11 @@ extension VideoVC : UICollectionViewDelegate , UICollectionViewDataSource , UICo
     //MARK: - Cells Sizes
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if is_portrait == true {
-            let width = portraitWidth
-            if indexPath.row == 0 {
-                let height = CGFloat(124)
+            let width = self.view.frame.width
+            let height = CGFloat(110)
+            print(width)
+            print(height)
                 return CGSize(width : width , height : height)
-            } else {
-                let height = CGFloat(108)
-                return CGSize(width : width , height : height)
-            }
-            
         } else {
             let width = portraitWidth / 4
             let height = portraitHeight - 24
@@ -46,7 +42,7 @@ extension VideoVC : UICollectionViewDelegate , UICollectionViewDataSource , UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if is_portrait == true {
-            return UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
+            return UIEdgeInsets(top: 6, left: 0, bottom: 12, right: 0)
         } else {
             return UIEdgeInsets(top: 12, left: 20, bottom: 12, right: 20)
         }

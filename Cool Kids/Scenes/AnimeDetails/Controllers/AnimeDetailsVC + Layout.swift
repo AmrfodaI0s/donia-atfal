@@ -9,7 +9,10 @@
 import UIKit
 
 //  Extention - set Layout & data for CollectionView Cells
-extension AnimeDetailsVC {
+extension AnimeDetailsVC: VideoDelegate {
+    func goBack(vc: UIViewController) {
+        vc.dismiss(animated: true, completion: nil)
+    }
     
     //MARK: -  configure collection view that hold all videos of segment controll
     func configureCollection() {
