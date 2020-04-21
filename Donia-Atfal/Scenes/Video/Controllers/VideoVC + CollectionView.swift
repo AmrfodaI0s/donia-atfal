@@ -30,9 +30,7 @@ extension VideoVC : UICollectionViewDelegate , UICollectionViewDataSource , UICo
         if is_portrait == true {
             let width = self.view.frame.width
             let height = CGFloat(110)
-            print(width)
-            print(height)
-                return CGSize(width : width , height : height)
+            return CGSize(width : width , height : height)
         } else {
             let width = portraitWidth / 4
             let height = portraitHeight - 24

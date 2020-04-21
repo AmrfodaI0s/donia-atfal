@@ -22,7 +22,7 @@
 		AAC040B92445CD5600E82A81 /* AnimeDetailsVC + API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040B82445CD5600E82A81 /* AnimeDetailsVC + API.swift */; };
 		AAC040BB2445CDF100E82A81 /* AnimeDetailsVC + Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040BA2445CDF100E82A81 /* AnimeDetailsVC + Layout.swift */; };
 		AAC040BF2446666F00E82A81 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040BE2446666F00E82A81 /* VideoView.swift */; };
-		AAC040C424469B2300E82A81 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040C324469B2300E82A81 /* State.swift */; };
+		AAC040C424469B2300E82A81 /* PanGesture + State.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040C324469B2300E82A81 /* PanGesture + State.swift */; };
 		AAC040C62446A5EA00E82A81 /* VideoVC + LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040C52446A5EA00E82A81 /* VideoVC + LoadData.swift */; };
 		AAC040C82446ACA000E82A81 /* VideoVC + Tracking Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040C72446ACA000E82A81 /* VideoVC + Tracking Video.swift */; };
 		AAC040CB2446B0A500E82A81 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC040C92446B0A500E82A81 /* VideoCollectionViewCell.swift */; };
@@ -92,7 +92,7 @@
 		AAC040B82445CD5600E82A81 /* AnimeDetailsVC + API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimeDetailsVC + API.swift"; sourceTree = "<group>"; };
 		AAC040BA2445CDF100E82A81 /* AnimeDetailsVC + Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimeDetailsVC + Layout.swift"; sourceTree = "<group>"; };
 		AAC040BE2446666F00E82A81 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		AAC040C324469B2300E82A81 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		AAC040C324469B2300E82A81 /* PanGesture + State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PanGesture + State.swift"; sourceTree = "<group>"; };
 		AAC040C52446A5EA00E82A81 /* VideoVC + LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoVC + LoadData.swift"; sourceTree = "<group>"; };
 		AAC040C72446ACA000E82A81 /* VideoVC + Tracking Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoVC + Tracking Video.swift"; sourceTree = "<group>"; };
 		AAC040C92446B0A500E82A81 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		EF0F464523FD844B00B00A2B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		EF1F2A1124224E2900D2ACB5 /* AnimeDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimeDetails.storyboard; sourceTree = "<group>"; };
 		EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsVC.swift; sourceTree = "<group>"; };
-		EF71F72B23F16362007BE84D /* Cool Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cool Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF71F72B23F16362007BE84D /* Donia-Atfal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donia-Atfal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF71F72E23F16362007BE84D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF71F73023F16362007BE84D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF71F73223F16362007BE84D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 				AAC040C72446ACA000E82A81 /* VideoVC + Tracking Video.swift */,
 				AAC040CD2446B59F00E82A81 /* VideoVC + Cells.swift */,
 				AACA1A13244B230200598A17 /* Scrolling + extention.swift */,
-				AAC040C324469B2300E82A81 /* State.swift */,
+				AAC040C324469B2300E82A81 /* PanGesture + State.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 		EF71F72223F16362007BE84D = {
 			isa = PBXGroup;
 			children = (
-				EF71F72D23F16362007BE84D /* Cool Kids */,
+				EF71F72D23F16362007BE84D /* Donia-Atfal */,
 				EF71F72C23F16362007BE84D /* Products */,
 				A79F7DE636EE9161EDC8489D /* Pods */,
 				E4C1749BA581B467CA83C248 /* Frameworks */,
@@ -371,12 +371,12 @@
 		EF71F72C23F16362007BE84D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF71F72B23F16362007BE84D /* Cool Kids.app */,
+				EF71F72B23F16362007BE84D /* Donia-Atfal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EF71F72D23F16362007BE84D /* Cool Kids */ = {
+		EF71F72D23F16362007BE84D /* Donia-Atfal */ = {
 			isa = PBXGroup;
 			children = (
 				EF71F74423F16BDF007BE84D /* Core */,
@@ -386,7 +386,7 @@
 				EF71F74623F16C1E007BE84D /* Configs */,
 				EF71F74523F16BF0007BE84D /* Resources */,
 			);
-			path = "Cool Kids";
+			path = "Donia-Atfal";
 			sourceTree = "<group>";
 		};
 		EF71F74223F16BC6007BE84D /* Scenes */ = {
@@ -548,9 +548,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EF71F72A23F16362007BE84D /* Cool Kids */ = {
+		EF71F72A23F16362007BE84D /* Donia-Atfal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF71F73F23F16368007BE84D /* Build configuration list for PBXNativeTarget "Cool Kids" */;
+			buildConfigurationList = EF71F73F23F16368007BE84D /* Build configuration list for PBXNativeTarget "Donia-Atfal" */;
 			buildPhases = (
 				10DA473EF5477A3E883F5513 /* [CP] Check Pods Manifest.lock */,
 				EF71F72723F16362007BE84D /* Sources */,
@@ -562,9 +562,9 @@
 			);
 			dependencies = (
 			);
-			name = "Cool Kids";
+			name = "Donia-Atfal";
 			productName = "Cool Kids";
-			productReference = EF71F72B23F16362007BE84D /* Cool Kids.app */;
+			productReference = EF71F72B23F16362007BE84D /* Donia-Atfal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -582,7 +582,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EF71F72623F16362007BE84D /* Build configuration list for PBXProject "Cool Kids" */;
+			buildConfigurationList = EF71F72623F16362007BE84D /* Build configuration list for PBXProject "Donia-Atfal" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -595,7 +595,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF71F72A23F16362007BE84D /* Cool Kids */,
+				EF71F72A23F16362007BE84D /* Donia-Atfal */,
 			);
 		};
 /* End PBXProject section */
@@ -678,7 +678,7 @@
 				AAC040BB2445CDF100E82A81 /* AnimeDetailsVC + Layout.swift in Sources */,
 				AAC975CA2444E876007C5C6F /* VideoVC + CollectionView.swift in Sources */,
 				EF71F73323F16362007BE84D /* MainVC.swift in Sources */,
-				AAC040C424469B2300E82A81 /* State.swift in Sources */,
+				AAC040C424469B2300E82A81 /* PanGesture + State.swift in Sources */,
 				EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */,
 				EFD9F43224211C9F00D1C686 /* ContentCollectionViewCell.swift in Sources */,
 				AAD1C4CC24411B1800B715FF /* CurrentTheme.swift in Sources */,
@@ -859,16 +859,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 874WHJ22Z3;
-				INFOPLIST_FILE = "$(SRCROOT)/Cool Kids/Configs/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Donia-Atfal/Configs/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ios.ioslam.Cool-Kids";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.ioslam.Donia-Atfal";
+				PRODUCT_NAME = "Donia-Atfal";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -879,23 +879,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 874WHJ22Z3;
-				INFOPLIST_FILE = "$(SRCROOT)/Cool Kids/Configs/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Donia-Atfal/Configs/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ios.ioslam.Cool-Kids";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.ioslam.Donia-Atfal";
+				PRODUCT_NAME = "Donia-Atfal";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EF71F72623F16362007BE84D /* Build configuration list for PBXProject "Cool Kids" */ = {
+		EF71F72623F16362007BE84D /* Build configuration list for PBXProject "Donia-Atfal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF71F73D23F16368007BE84D /* Debug */,
@@ -904,7 +904,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF71F73F23F16368007BE84D /* Build configuration list for PBXNativeTarget "Cool Kids" */ = {
+		EF71F73F23F16368007BE84D /* Build configuration list for PBXNativeTarget "Donia-Atfal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF71F74023F16368007BE84D /* Debug */,

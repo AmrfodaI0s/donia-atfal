@@ -45,11 +45,11 @@ class VideoVC: UIViewController {
                 }
                 self.videoView.RecommendedCollection.reloadData()
             } else {
-                portraitHeight = 100
+                portraitHeight = 230
                 portraitWidth = portraitFrameHeight
-                if let flowLayout = videoView.RecommendedCollection.collectionViewLayout as? UICollectionViewFlowLayout {
-                    flowLayout.scrollDirection = .horizontal
-                    videoView.RecommendedCollection.collectionViewLayout = flowLayout
+                if let  flowLayout = videoView.RecommendedCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+                        flowLayout.scrollDirection = .horizontal
+                        videoView.RecommendedCollection.collectionViewLayout = flowLayout
                 }
                 self.videoView.RecommendedCollection.reloadData()
             }

@@ -30,7 +30,7 @@ extension VideoVC {
                 return cell
         } else {
             //MARK: - LandScape Cells
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionCell", for: indexPath) as! VideoCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cell_id, for: indexPath) as! VideoCollectionViewCell
             cell.anime_name_label.text = related_videos?[indexPath.row].name ?? ""
             cell.views_count_label.text = String(related_videos?[indexPath.row].views ?? 0)
             //Cell Image

@@ -32,6 +32,9 @@ extension VideoVC {
         videoView.videoSlider?.addTarget(self, action: #selector(sliderEndedTracking), for: .touchUpOutside)
         videoView.videoSlider?.addTarget(self, action: #selector(sliderISMoving), for: .touchDragInside)
         
+        //BottomView Gestures
+         panGesture = UIPanGestureRecognizer(target: self, action: #selector(PanGestureFunc))
+         videoView.videoView?.addGestureRecognizer(panGesture)
     }
     
     //MARK: - Hide Status Bar
@@ -128,12 +131,14 @@ extension VideoVC {
             self.videoView.BackWardButton?.alpha = 1
             self.videoView.ForwardButton?.alpha = 1
             videoView.BottomView?.alpha = 1
-            videoView.ControlsView?.removeGestureRecognizer(panGesture)
+            is_portrait = true
+            videoView.videoView?.removeGestureRecognizer(panGesture)
         } else {
             videoView.ControlsView?.alpha = 0
             videoView.BottomView?.backgroundColor = .clear
             videoView.BottomView?.alpha = 0
-            videoView.ControlsView?.addGestureRecognizer(panGesture)
+            is_portrait = false
+            videoView.videoView?.addGestureRecognizer(panGesture)
         }
     }
     private func Theme_Setup() {
