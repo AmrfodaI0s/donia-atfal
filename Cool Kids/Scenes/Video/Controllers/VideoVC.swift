@@ -11,10 +11,13 @@ import AVKit
 class VideoVC: UIViewController {
     
   
-
+    @IBOutlet weak var startPause: UIButton!
+    @IBOutlet weak var infoViewHeightCons: NSLayoutConstraint!
+    
     @IBOutlet var videoView: VideoView!
     //Variables & Objects
     let url = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+    var lastContentOffset: CGFloat = 0
     var player = AVPlayer()
     var playerLayer = AVPlayerLayer()
     var is_playing = true
@@ -56,12 +59,10 @@ class VideoVC: UIViewController {
         super.viewDidLoad()
         setLayout()
         loadVideo()
+        setupCollection()
     }
     //MARK: - set VC layout
     func setLayout() {
-        videoView.RecommendedCollection.dataSource = self
-        videoView.RecommendedCollection.delegate = self
-        videoView.RecommendedCollection.register(UINib(nibName: "VideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cell_id)
         videoView.episode_label?.text = selectedVideo?.name ?? "غير متاحة"
         videoView.LikeButton?.addTarget(self, action: #selector(likePressed), for: .touchUpInside)
         
@@ -73,6 +74,6 @@ class VideoVC: UIViewController {
             videoView.LikeButton?.setBackgroundImage(#imageLiteral(resourceName: "favorite_orange"), for: .normal)
         }
     }
-    
+        
 } // End-Class VideoVC
 

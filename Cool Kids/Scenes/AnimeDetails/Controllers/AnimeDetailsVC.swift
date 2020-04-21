@@ -16,8 +16,6 @@ class AnimeDetailsVC: UIViewController {
     var related_videos: Videos?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //swipeFromRight()
         SwipeBack()
         //set attributes for the labels and Images from the fetched data
         setAnimeLayoutData()

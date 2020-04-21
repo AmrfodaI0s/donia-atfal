@@ -9,7 +9,7 @@
 import UIKit
 
 //  Extention - set Layout & data for CollectionView Cells
-extension AnimeDetailsVC: VideoDelegate {
+extension AnimeDetailsVC {
     func goBack(vc: UIViewController) {
         vc.dismiss(animated: true, completion: nil)
     }

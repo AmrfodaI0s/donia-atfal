@@ -85,16 +85,10 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
         default:
             print("err didSelect")
         }
-        //
+        
         self.present(vc, animated: true)
-        //self.presentAsSheet(vc, height: view.frame.height)
     }
     
-    //MARK: - Move to VideoVC using PresentationController
-    @objc func presentPressed() {
-        //let height = view.frame.height - 400
-        presentAsSheet(VideoVC(), height: 600)
-    }
     //MARK: -  define which video didSelect in which Segment 0 || 1
     func selectVideo(vc: VideoVC,video: [Video]?,_ index: Int) {
          if video?[index] != nil {

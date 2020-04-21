@@ -10,7 +10,9 @@ import UIKit
 @IBDesignable
 class VideoView: UIView {
     //Outlets
-        @IBOutlet weak var videoView: UIView?
+        @IBOutlet weak var titleInfoView: UIView?
+    @IBOutlet weak var videoView: UIView?
+
         @IBOutlet weak var Start_Pause: UIButton?
         @IBOutlet weak var showButton: UIButton?
         @IBOutlet weak var ForwardButton: UIButton?

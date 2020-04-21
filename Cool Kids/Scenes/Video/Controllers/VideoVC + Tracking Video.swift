@@ -16,7 +16,7 @@ extension VideoVC {
     
     //MARK: - VideoSlider is Moving
     @objc func sliderISMoving() {
-        
+        showControls(0.1)
         player.pause()
         if let sender_value = videoView.videoSlider?.value {
         //Turn Slider Value into Time To Display
@@ -29,15 +29,15 @@ extension VideoVC {
             self.videoView.CurrentLabel?.text = "\(mints):\(seconds)"
         }
     }
+        hideControls(3)
     }
     
     //MARK: - Video Slider Ended Tracking
     @objc func sliderEndedTracking() {
-        
         is_sliding = false
         if let sender_value = videoView.videoSlider?.value {
         player.seek(to: CMTimeMake(value: Int64(sender_value * 1000), timescale: 1000))
-//        videoSlider.value = videoSlider.value
+            //videoView.videoSlider?.value = videoView.videoSlider?.value as! Float
         player.play()
         videoView.Start_Pause?.setImage(#imageLiteral(resourceName: "pause_white"), for: .normal)
         }
@@ -62,7 +62,7 @@ extension VideoVC {
             guard currentItem.status.rawValue == AVPlayerItem.Status.readyToPlay.rawValue else { return }
             self?.videoView.videoSlider?.minimumValue = 0
             self?.videoView.videoSlider?.maximumValue = Float(currentItem.duration.seconds)
-            if self?.is_sliding == true{
+            if self?.is_sliding == true {
                 self?.videoView.videoSlider?.value = (self?.videoView.videoSlider?.value)!
             } else {
                 self?.videoView.videoSlider?.value = Float(currentItem.currentTime().seconds)
@@ -73,7 +73,9 @@ extension VideoVC {
                     print("The end")
                 }
             }
-            self?.videoView.CurrentLabel?.text = self?.getTimeString(time: currentItem.currentTime())
+           // if currentItem.currentTime() == 0 {
+                self?.videoView.CurrentLabel?.text = self?.getTimeString(time: currentItem.currentTime())
+           // }
         })
     }
     
@@ -86,7 +88,11 @@ extension VideoVC {
         if hours > 0 {
             return "\(hours):\(mints):\(seconds)"
         } else {
+            if seconds <= 9 {
+                return "\(mints):0\(seconds)"
+            } else {
             return "\(mints):\(seconds)"
+            }
         }
     }
     
@@ -101,7 +107,7 @@ extension VideoVC {
     }
     
     //MARK: - Backward Video
-   @objc func Video_Backward() {
+    @objc func Video_Backward() {
         player.pause()
         let currenttime = CMTimeGetSeconds(player.currentTime())
         let nextTime = currenttime - 5
@@ -113,3 +119,4 @@ extension VideoVC {
         player.play()
     }
 }
+

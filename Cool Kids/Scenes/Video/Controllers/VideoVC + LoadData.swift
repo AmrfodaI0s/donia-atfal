@@ -6,13 +6,12 @@
 //  Copyright © 2020 ioslam. All rights reserved.
 //
 import UIKit
-import AVFoundation
+import AVKit
 extension VideoVC {
     
     //MARK: - Call video
     func loadVideo() {
         videoView.landscapeNameLabel?.text = selectedVideo?.name
-        
         //MARK: - Video Player
         videoView.ActivityIndicator?.startAnimating()
         videoView.ControlsView?.alpha = 0
@@ -33,9 +32,6 @@ extension VideoVC {
         videoView.videoSlider?.addTarget(self, action: #selector(sliderEndedTracking), for: .touchUpOutside)
         videoView.videoSlider?.addTarget(self, action: #selector(sliderISMoving), for: .touchDragInside)
         
-        //BottomView Gestures
-        panGesture = UIPanGestureRecognizer(target: self, action: #selector(PanGestureFunc))
-        videoView.videoView?.addGestureRecognizer(panGesture)
     }
     
     //MARK: - Hide Status Bar
@@ -59,14 +55,12 @@ extension VideoVC {
         UIDevice.current.setValue(value, forKey: "orientation")
     }
     override func viewDidDisappear(_ animated: Bool) {
-        self.dismiss(animated: true) {
-            self.removeFromParent()
-        }
+        print("view Did Disappear")
     }
-    
+   
     //MARK: - ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
-        
+        hideControls(5)
         //Calling Theme
         Theme_Setup()
         
@@ -85,31 +79,29 @@ extension VideoVC {
     }
     
     //MARK: - Start-Pause Button
-    @IBAction func Start_Pause(_ sender: Any) {
+    @IBAction func Start_Pause(_ sender: UIButton) {
         if is_playing == true {
+            self.videoView.ControlsView?.alpha = 1
             is_playing = !is_playing
-            videoView.Start_Pause?.setImage(#imageLiteral(resourceName: "play_white"), for: .normal)
+            sender.setBackgroundImage(#imageLiteral(resourceName: "play_white"), for: .normal)
             player.pause()
         } else {
-            is_playing = !is_playing
-            videoView.Start_Pause?.setImage(#imageLiteral(resourceName: "pause_white"), for: .normal)
+            is_playing = !is_playing // false
+            sender.setBackgroundImage(#imageLiteral(resourceName: "pause_white"), for: .normal)
             player.play()
         }
+           // is_playing ? showControls() : hideControls()
     }
     
     //MARK: - Show Controls Button
     @IBAction func Show_Controls() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            self?.videoView.ControlsView?.alpha = 1
-        }
+        showControls(0.5)
+        hideControls(4)
     }
     
     //MARK: - Hide Controls Button
     @IBAction func Hide_Controls(_ sender: Any) {
-        UIView.animate(withDuration: 0.3, animations: {
-        }) { [weak self] (_) in
-            self?.videoView.ControlsView?.alpha = 0.0
-        }
+        hideControls(1)
     }
     //MARK: - Forward Button
     @IBAction func Backward_Button(_ sender: Any) {
@@ -146,6 +138,22 @@ extension VideoVC {
     }
     private func Theme_Setup() {
         videoView.BottomView?.backgroundColor = Theme.current.BG_Color
+    }
+    func hideControls(_ time: TimeInterval) {
+        Timer.scheduledTimer(withTimeInterval: time, repeats: false) { (timer) in
+            UIView.animate(withDuration: 0.3, animations: {
+            }) { [weak self] (_) in
+                self?.videoView.ControlsView?.alpha = 0.0
+            }
+        }
+    }
+    func showControls(_ time: TimeInterval) {
+        Timer.scheduledTimer(withTimeInterval: time, repeats: false) { (timer) in
+            UIView.animate(withDuration: 0.3, animations: {
+            }) { [weak self] (_) in
+                self?.videoView.ControlsView?.alpha = 1
+            }
+        }
     }
     
 }
