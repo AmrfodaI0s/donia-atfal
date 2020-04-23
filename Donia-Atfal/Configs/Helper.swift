@@ -11,7 +11,8 @@ import Lottie
 import Kingfisher
 class Helper {
     static var vSpinner : UIView?
-    
+    var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+
     //MARK: -  set Status bar Color
     static func setStatusBarColor(view : UIView , withColor:UIColor) {
         let tag = 12321
@@ -81,6 +82,24 @@ class Helper {
         let Url = url.hasPrefix("http") ? url : URLs.imageRequestURL + url
         imageView?.kf.indicatorType = .activity
         imageView?.kf.setImage(with: URL(string : Url ), options: [.transition(.flipFromRight(0.3))])
+    }
+    //MARK: - Gesture Dismiss from Top
+    func dismissTransition(vc: UIViewController,_ sender:  UIPanGestureRecognizer) {
+        let touchPoint = sender.location(in: vc.view?.window)
+        if(sender.state == UIGestureRecognizer.State.began){
+            initialTouchPoint = touchPoint
+        } else if(sender.state == UIGestureRecognizer.State.changed) {
+            if touchPoint.y - initialTouchPoint.y > 0 {
+                vc.view.frame = CGRect(x: 0, y: touchPoint.y, width: vc.view.frame.width, height: vc.view.frame.height)
+            }
+        }else if sender.state == UIGestureRecognizer.State.ended || sender.state==UIGestureRecognizer.State.cancelled{
+            
+            if touchPoint.y - initialTouchPoint.y > 150 {
+                vc.dismiss(animated: true, completion: nil)
+            }else{
+                UIView.animate(withDuration: 0.5, animations: {vc.view.frame = CGRect(x: 0, y: 0, width: vc.view.frame.width, height: vc.view.frame.height)})
+            }
+        }
     }
 } // end of Helper class
 

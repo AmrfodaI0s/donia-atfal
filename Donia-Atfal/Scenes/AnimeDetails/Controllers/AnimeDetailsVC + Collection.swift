@@ -76,7 +76,7 @@ extension AnimeDetailsVC : UICollectionViewDelegateFlowLayout, UICollectionViewD
         vc.modalPresentationStyle = .fullScreen
 
         let segmentIndex = anime.segmentController?.selectedSegmentIndex
-        
+            
         switch segmentIndex {
         case 0:
             selectVideo(vc: vc, video: videos, indexPath.row)

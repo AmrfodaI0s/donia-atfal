@@ -14,11 +14,11 @@ extension VideoVC {
         videoView.landscapeNameLabel?.text = selectedVideo?.name
         //MARK: - Video Player
         videoView.ActivityIndicator?.startAnimating()
-        videoView.ControlsView?.alpha = 0
+        cView.alpha = 0
         player = AVPlayer(url: self.url)
         playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = .resize
-        videoView.videoView?.layer.addSublayer(playerLayer)
+        vView.layer.addSublayer(playerLayer)
         
         //MARK: - Adding Video Observer
         player.currentItem?.addObserver(self, forKeyPath: "duration", options: [.new , .initial], context: nil)
@@ -34,7 +34,7 @@ extension VideoVC {
         
         //BottomView Gestures
          panGesture = UIPanGestureRecognizer(target: self, action: #selector(PanGestureFunc))
-         videoView.videoView?.addGestureRecognizer(panGesture)
+         vView.addGestureRecognizer(panGesture)
     }
     
     //MARK: - Hide Status Bar
@@ -49,7 +49,7 @@ extension VideoVC {
     
     //MARK: - ViewDidLayoutSubviews
     override func viewDidLayoutSubviews() {
-        playerLayer.frame = videoView.videoView!.bounds
+        playerLayer.frame = vView.bounds
     }
     
     //MARK: - ViewWillDisappear
@@ -84,7 +84,7 @@ extension VideoVC {
     //MARK: - Start-Pause Button
     @IBAction func Start_Pause(_ sender: UIButton) {
         if is_playing == true {
-            self.videoView.ControlsView?.alpha = 1
+            self.cView.alpha = 1
             is_playing = !is_playing
             sender.setBackgroundImage(#imageLiteral(resourceName: "play_white"), for: .normal)
             player.pause()
@@ -125,20 +125,20 @@ extension VideoVC {
         if UIDevice.current.orientation.isPortrait == true {
             videoView.BottomView?.backgroundColor = Theme.current.BG_Color
             self.videoView.videoSlider?.alpha = 1
-            self.videoView.Start_Pause?.alpha = 1
+            //self.videoView.Start_Pause?.alpha = 1
             self.videoView.FullLabel?.alpha = 1
             self.videoView.CurrentLabel?.alpha = 1
-            self.videoView.BackWardButton?.alpha = 1
-            self.videoView.ForwardButton?.alpha = 1
+            //self.videoView.BackWardButton?.alpha = 1
+            //self.videoView.ForwardButton?.alpha = 1
             videoView.BottomView?.alpha = 1
             is_portrait = true
-            videoView.videoView?.removeGestureRecognizer(panGesture)
+            vView.removeGestureRecognizer(panGesture)
         } else {
-            videoView.ControlsView?.alpha = 0
+            cView.alpha = 0
             videoView.BottomView?.backgroundColor = .clear
             videoView.BottomView?.alpha = 0
             is_portrait = false
-            videoView.videoView?.addGestureRecognizer(panGesture)
+            vView.addGestureRecognizer(panGesture)
         }
     }
     private func Theme_Setup() {
@@ -148,7 +148,7 @@ extension VideoVC {
         Timer.scheduledTimer(withTimeInterval: time, repeats: false) { (timer) in
             UIView.animate(withDuration: 0.3, animations: {
             }) { [weak self] (_) in
-                self?.videoView.ControlsView?.alpha = 0.0
+                self?.cView.alpha = 0.0
             }
         }
     }
@@ -156,7 +156,7 @@ extension VideoVC {
         Timer.scheduledTimer(withTimeInterval: time, repeats: false) { (timer) in
             UIView.animate(withDuration: 0.3, animations: {
             }) { [weak self] (_) in
-                self?.videoView.ControlsView?.alpha = 1
+                self?.cView.alpha = 1
             }
         }
     }

@@ -39,7 +39,7 @@ extension VideoVC {
         player.seek(to: CMTimeMake(value: Int64(sender_value * 1000), timescale: 1000))
             //videoView.videoSlider?.value = videoView.videoSlider?.value as! Float
         player.play()
-        videoView.Start_Pause?.setImage(#imageLiteral(resourceName: "pause_white"), for: .normal)
+        //videoView.Start_Pause?.setImage(#imageLiteral(resourceName: "pause_white"), for: .normal)
         }
     }
     
@@ -49,7 +49,7 @@ extension VideoVC {
             videoView.ActivityIndicator?.stopAnimating()
             videoView.ActivityIndicator?.alpha = 0.0
             self.videoView.FullLabel?.text = getTimeString(time: player.currentItem!.duration)
-            videoView.ControlsView?.alpha = 1
+            cView.alpha = 1
         }
     }
     

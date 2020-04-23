@@ -108,21 +108,21 @@ extension VideoVC {
     func openCase() {
         self.videoView.BottomViewConstant?.constant = 0
         self.videoView.videoSlider?.alpha = 0
-        self.videoView.Start_Pause?.alpha = 0
+        //self.videoView.Start_Pause?.alpha = 0
         self.videoView.FullLabel?.alpha = 0
         self.videoView.CurrentLabel?.alpha = 0
-        self.videoView.BackWardButton?.alpha = 0
-        self.videoView.ForwardButton?.alpha = 0
+        //self.videoView.BackWardButton?.alpha = 0
+        //self.videoView.ForwardButton?.alpha = 0
     }
     
     func closeCase() {
        self.videoView.BottomViewConstant?.constant = 130
         self.videoView.videoSlider?.alpha = 1
-        self.videoView.Start_Pause?.alpha = 1
+        //self.videoView.Start_Pause?.alpha = 1
         self.videoView.FullLabel?.alpha = 1
         self.videoView.CurrentLabel?.alpha = 1
-        self.videoView.BackWardButton?.alpha = 1
-        self.videoView.ForwardButton?.alpha = 1
+       // self.videoView.BackWardButton?.alpha = 1
+      //  self.videoView.ForwardButton?.alpha = 1
     }
     
 }

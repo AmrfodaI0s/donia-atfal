@@ -15,8 +15,8 @@
         <!--Anime DetailsVC-->
         <scene sceneID="QYD-LH-E4v">
             <objects>
-                <viewController storyboardIdentifier="DetailedVC" id="o7n-1m-9vX" customClass="AnimeDetailsVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6S6-99-LrP" customClass="AnimeDetailsView" customModule="Cool_Kids" customModuleProvider="target">
+                <viewController storyboardIdentifier="DetailedVC" id="o7n-1m-9vX" customClass="AnimeDetailsVC" customModule="Donia_Atfal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6S6-99-LrP" customClass="AnimeDetailsView" customModule="Donia_Atfal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -33,7 +33,7 @@
                                                     <constraint firstAttribute="height" constant="320" id="Nas-WL-zTJ"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-Va-7V4" customClass="GradientView" customModule="Cool_Kids" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-Va-7V4" customClass="GradientView" customModule="Donia_Atfal" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="168" width="375" height="152"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مسلسل كونان" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMr-mh-zYR">
@@ -273,8 +273,8 @@
         <!--VideoVC-->
         <scene sceneID="gvu-N7-32O">
             <objects>
-                <viewController storyboardIdentifier="videoVC" id="JQq-OS-7dI" customClass="VideoVC" customModule="Cool_Kids" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" tag="100" contentMode="scaleToFill" id="eTc-5A-xyj" customClass="VideoView" customModule="Cool_Kids" customModuleProvider="target">
+                <viewController storyboardIdentifier="videoVC" id="JQq-OS-7dI" customClass="VideoVC" customModule="Donia_Atfal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="100" contentMode="scaleToFill" id="eTc-5A-xyj" customClass="VideoView" customModule="Donia_Atfal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -299,6 +299,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                 <connections>
                                     <action selector="Show_Controls" destination="JQq-OS-7dI" eventType="touchUpInside" id="Jp8-eY-ckr"/>
+                                    <outletCollection property="gestureRecognizers" destination="Dty-g5-iP7" appends="YES" id="oJF-Fh-ePC"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="J8o-sZ-86i">
@@ -322,6 +323,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="Hide_Controls:" destination="JQq-OS-7dI" eventType="touchUpInside" id="gJQ-uC-SaH"/>
+                                            <outletCollection property="gestureRecognizers" destination="9fF-w2-BWH" appends="YES" id="98S-hP-VZM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As7-4D-KNW">
@@ -585,9 +587,9 @@
                                         <exclude reference="lJf-8W-hXh"/>
                                         <exclude reference="CxY-7b-dY5"/>
                                         <exclude reference="ocZ-I3-9Fn"/>
+                                        <exclude reference="b3a-b3-hjU"/>
                                         <exclude reference="CJO-dk-f60"/>
                                         <exclude reference="YBD-DV-DHv"/>
-                                        <exclude reference="b3a-b3-hjU"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -673,7 +675,7 @@
                                                 <state key="normal" image="favorite_dim"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التالي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpI-yi-LdM">
-                                                <rect key="frame" x="318" y="69" width="33" height="27"/>
+                                                <rect key="frame" x="315.5" y="69" width="35.5" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="Zt9-we-v7k"/>
                                                 </constraints>
@@ -688,7 +690,7 @@
                                                 </constraints>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تشغيل تلقائي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-Lk-voO">
-                                                <rect key="frame" x="77" y="69" width="75" height="27"/>
+                                                <rect key="frame" x="77" y="69" width="98" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="wcP-Hu-uCt"/>
                                                 </constraints>
@@ -883,7 +885,6 @@
                             <outlet property="ActivityIndicator" destination="J8o-sZ-86i" id="Dq3-YO-Fnv"/>
                             <outlet property="BottomView" destination="Dza-c7-eee" id="e2u-fr-hgW"/>
                             <outlet property="BottomViewConstant" destination="eE7-PO-lj2" id="0Gj-Xq-hKm"/>
-                            <outlet property="ControlsView" destination="TBD-Qc-mRF" id="buL-fR-tTZ"/>
                             <outlet property="CurrentLabel" destination="c9g-dB-GMn" id="Sj5-bO-g4j"/>
                             <outlet property="FullLabel" destination="gvN-oZ-aAe" id="H83-eH-Fz2"/>
                             <outlet property="LikeButton" destination="jue-iY-OnY" id="u84-zb-Rp1"/>
@@ -892,16 +893,28 @@
                             <outlet property="landscapeNameLabel" destination="JxN-4X-AoN" id="RJg-O7-TLd"/>
                             <outlet property="titleInfoView" destination="esQ-zb-tEL" id="SK3-ub-Egj"/>
                             <outlet property="videoSlider" destination="f0r-7e-FkU" id="TIw-ZY-wy3"/>
-                            <outlet property="videoView" destination="xO2-Cv-Pqc" id="R5Y-B9-kuQ"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="cView" destination="TBD-Qc-mRF" id="JMI-eQ-OCB"/>
                         <outlet property="infoViewHeightCons" destination="bY4-is-iIX" id="cju-Ay-TcI"/>
                         <outlet property="startPause" destination="As7-4D-KNW" id="Kha-IG-vcK"/>
+                        <outlet property="vView" destination="xO2-Cv-Pqc" id="F77-n3-tDA"/>
                         <outlet property="videoView" destination="eTc-5A-xyj" id="Dyd-Ua-1Zj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tzh-zm-gUb" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9fF-w2-BWH">
+                    <connections>
+                        <action selector="disMiss:" destination="JQq-OS-7dI" id="1dd-5C-y8P"/>
+                        <outlet property="delegate" destination="JQq-OS-7dI" id="zXg-OY-Lpe"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Dty-g5-iP7">
+                    <connections>
+                        <action selector="dismissGesture:" destination="JQq-OS-7dI" id="Zux-gA-0s6"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-76" y="-657.12143928035982"/>
         </scene>

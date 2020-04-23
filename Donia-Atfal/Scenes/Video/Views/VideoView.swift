@@ -11,17 +11,17 @@ import UIKit
 class VideoView: UIView {
     //Outlets
         @IBOutlet weak var titleInfoView: UIView?
-    @IBOutlet weak var videoView: UIView?
+    //@IBOutlet weak var videoView: UIView?
 
-        @IBOutlet weak var Start_Pause: UIButton?
-        @IBOutlet weak var showButton: UIButton?
-        @IBOutlet weak var ForwardButton: UIButton?
-        @IBOutlet weak var BackWardButton: UIButton?
+//        @IBOutlet weak var Start_Pause: UIButton?
+//        @IBOutlet weak var showButton: UIButton?
+//        @IBOutlet weak var ForwardButton: UIButton?
+//        @IBOutlet weak var BackWardButton: UIButton?
         @IBOutlet weak var LikeButton: UIButton?
         @IBOutlet weak var CurrentLabel: UILabel?
         @IBOutlet weak var FullLabel: UILabel?
         @IBOutlet weak var videoSlider: UISlider?
-        @IBOutlet weak var ControlsView: UIView?
+       // @IBOutlet weak var ControlsView: UIView?
         @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView?
         @IBOutlet weak var BottomView: UIView?
         @IBOutlet weak var BottomViewConstant: NSLayoutConstraint?

@@ -13,9 +13,13 @@ class VideoVC: UIViewController {
   
     @IBOutlet weak var startPause: UIButton!
     @IBOutlet weak var infoViewHeightCons: NSLayoutConstraint!
-    
+
+    @IBOutlet weak var cView: UIView!
+    @IBOutlet weak var vView: UIView!
     @IBOutlet var videoView: VideoView!
     //Variables & Objects
+    var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+
     let url = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
     var lastContentOffset: CGFloat = 0
     var player = AVPlayer()
@@ -74,6 +78,31 @@ class VideoVC: UIViewController {
             videoView.LikeButton?.setBackgroundImage(#imageLiteral(resourceName: "favorite_orange"), for: .normal)
         }
     }
+    //MARK: - dismiss Recognizer
+    @IBAction func disMiss(_ sender: UIPanGestureRecognizer) {
+        dismissTransition(sender)
+    }
+    @IBAction func dismissGesture(_ sender: UIPanGestureRecognizer) {
+        dismissTransition(sender)
+    }
+    func dismissTransition(_ sender:  UIPanGestureRecognizer) {
+        let touchPoint = sender.location(in: self.view?.window)
+        if(sender.state == UIGestureRecognizer.State.began){
+            initialTouchPoint = touchPoint
+        } else if(sender.state == UIGestureRecognizer.State.changed) {
+            if touchPoint.y - initialTouchPoint.y > 0 {
+                self.view.frame = CGRect(x: 0, y: touchPoint.y, width: self.view.frame.width, height: self.view.frame.height)
+            }
+        }else if sender.state == UIGestureRecognizer.State.ended || sender.state==UIGestureRecognizer.State.cancelled{
+            
+            if touchPoint.y - initialTouchPoint.y > 150 {
+                self.dismiss(animated: true, completion: nil)
+            }else{
+                UIView.animate(withDuration: 0.5, animations: {self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)})
+            }
+        }
+    }
+    
         
 } // End-Class VideoVC
 

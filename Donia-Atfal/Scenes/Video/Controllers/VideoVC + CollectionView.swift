@@ -69,9 +69,9 @@ extension VideoVC : UICollectionViewDelegate , UICollectionViewDataSource , UICo
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if self.lastContentOffset < scrollView.contentOffset.y {
             self.shrinkTitleView(x: 0, cons: 1)
-            self.videoView.videoView?.layer.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            self.videoView.videoView?.layer.shadowOffset = CGSize(width: 300, height: 4)
-            self.videoView.videoView?.clipsToBounds = true
+            self.vView.layer.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            self.vView.layer.shadowOffset = CGSize(width: 300, height: 4)
+            self.vView.clipsToBounds = true
 
         } else if self.lastContentOffset > scrollView.contentOffset.y {
             print("did move down")
