@@ -13,7 +13,7 @@ class SuperCV: UIViewController {
     var cell_id = "silderCell"
     var imageSet: [String] = ["magna","gogo","konan"]
     var categories = [Category]()
-    
+
     @IBOutlet var MainCollectionView: UICollectionView!
     
     override func viewDidLoad() {

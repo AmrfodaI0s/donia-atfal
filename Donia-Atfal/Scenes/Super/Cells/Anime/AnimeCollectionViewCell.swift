@@ -19,6 +19,7 @@ class AnimeCollectionViewCell : UICollectionViewCell{
             self.contentCollectionView.reloadData()
         }
     }
+    var selectedIndexPath: IndexPath!
     var selected_anime : ((Category)->())?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,4 +55,18 @@ extension AnimeCollectionViewCell: UICollectionViewDelegate , UICollectionViewDa
     }
     
     
+}
+extension AnimeCollectionViewCell: ZoomingViewController {
+    func zoomingImageView(for transition: ZoomTransitioningDelegate) -> UIImageView? {
+        if let indexPath = selectedIndexPath {
+            let cell = contentCollectionView.cellForItem(at: indexPath) as! ContentCollectionViewCell
+                return cell.iv
+        } else {
+            return nil
+        }
+}
+    func zoomingBackgroundView(for transition: ZoomTransitioningDelegate) -> UIView? {
+        
+        return nil
+    }
 }

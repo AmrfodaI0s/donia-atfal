@@ -134,12 +134,15 @@ extension VideoVC {
             is_portrait = true
             vView.removeGestureRecognizer(panGesture)
         } else {
-            cView.alpha = 0
-            videoView.BottomView?.backgroundColor = .clear
-            videoView.BottomView?.alpha = 0
-            is_portrait = false
-            vView.addGestureRecognizer(panGesture)
+           rotat()
         }
+    }
+    func rotat() {
+        cView.alpha = 0
+        videoView.BottomView?.backgroundColor = .clear
+        videoView.BottomView?.alpha = 0
+        is_portrait = false
+        vView.addGestureRecognizer(panGesture)
     }
     private func Theme_Setup() {
         videoView.BottomView?.backgroundColor = Theme.current.BG_Color

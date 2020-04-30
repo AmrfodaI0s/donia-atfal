@@ -87,10 +87,12 @@ class VideoVC: UIViewController {
     }
     func dismissTransition(_ sender:  UIPanGestureRecognizer) {
         let touchPoint = sender.location(in: self.view?.window)
+        
         if(sender.state == UIGestureRecognizer.State.began){
             initialTouchPoint = touchPoint
-        } else if(sender.state == UIGestureRecognizer.State.changed) {
+         } else if(sender.state == UIGestureRecognizer.State.changed) {
             if touchPoint.y - initialTouchPoint.y > 0 {
+                self.view.backgroundColor = .blue
                 self.view.frame = CGRect(x: 0, y: touchPoint.y, width: self.view.frame.width, height: self.view.frame.height)
             }
         }else if sender.state == UIGestureRecognizer.State.ended || sender.state==UIGestureRecognizer.State.cancelled{
@@ -103,6 +105,15 @@ class VideoVC: UIViewController {
         }
     }
     
-        
+    @IBAction func fullscreenButton(_ sender: UIButton) {
+        var value : Int = UIInterfaceOrientation.landscapeRight.rawValue
+        if UIApplication.shared.statusBarOrientation == .landscapeLeft || UIApplication.shared.statusBarOrientation == .landscapeRight {
+           value = UIInterfaceOrientation.portrait.rawValue
+        }
+
+        UIDevice.current.setValue(value, forKey: "orientation")
+        UIViewController.attemptRotationToDeviceOrientation()
+    }
+    
 } // End-Class VideoVC
 

@@ -27,11 +27,11 @@ extension SuperCV: UICollectionViewDataSource, UICollectionViewDelegateFlowLayou
             guard let cell = MainCollectionView.dequeueReusableCell(withReuseIdentifier: "animeCell", for: indexPath) as? AnimeCollectionViewCell else { return UICollectionViewCell() }
             cell.categories = categories[indexPath.row - 2].children!
             cell.category_label.text = self.categories[indexPath.row - 2].name 
-            cell.selected_anime = { [weak self] selected in
-            let destinationVC = UIStoryboard(name: "AnimeDetails", bundle: nil).instantiateViewController(withIdentifier: "DetailedVC") as! AnimeDetailsVC
-            destinationVC.selected_anime = selected
-            destinationVC.modalPresentationStyle = .fullScreen
-            self!.present(destinationVC, animated: true, completion: nil)
+            cell.selected_anime = { [weak self] selected in // 
+                     let destinationVC = UIStoryboard(name: "AnimeDetails", bundle: nil).instantiateViewController(withIdentifier: "DetailedVC") as! AnimeDetailsVC
+                      destinationVC.selected_anime = selected
+                      destinationVC.modalPresentationStyle = .fullScreen
+                      self!.present(destinationVC, animated: true, completion: nil)
             }
             return cell
         }

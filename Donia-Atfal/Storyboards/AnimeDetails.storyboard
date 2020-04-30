@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o7n-1m-9vX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8y6-gs-oJs">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -239,7 +239,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="D22-pz-c5I" firstAttribute="leading" secondItem="XkM-Yd-LNp" secondAttribute="leading" id="Gw5-5y-dt7"/>
                             <constraint firstItem="D22-pz-c5I" firstAttribute="top" secondItem="XkM-Yd-LNp" secondAttribute="top" id="XYH-qP-c5b"/>
@@ -261,6 +261,7 @@
                             <outlet property="viewCount_label" destination="CnF-J0-c9v" id="Z13-AO-wLV"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="OXD-H2-ExY"/>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="anime" destination="6S6-99-LrP" id="0mH-gd-TFw"/>
@@ -268,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9V-jm-80I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-778" y="-282"/>
+            <point key="canvasLocation" x="160.80000000000001" y="-282.4587706146927"/>
         </scene>
         <!--VideoVC-->
         <scene sceneID="gvu-N7-32O">
@@ -280,7 +281,7 @@
                         <subviews>
                             <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-Cv-Pqc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="FcC-4O-O0U"/>
                                 </constraints>
@@ -297,6 +298,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYy-e1-ouy" userLabel="Show Button">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="Show_Controls" destination="JQq-OS-7dI" eventType="touchUpInside" id="Jp8-eY-ckr"/>
                                     <outletCollection property="gestureRecognizers" destination="Dty-g5-iP7" appends="YES" id="oJF-Fh-ePC"/>
@@ -346,14 +348,30 @@
                                             <action selector="Start_Pause:" destination="JQq-OS-7dI" eventType="touchUpInside" id="sEO-gd-8Tl"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzl-6d-b0t">
+                                        <rect key="frame" x="343" y="193" width="24" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="bDk-xR-Xzr"/>
+                                            <constraint firstAttribute="height" constant="24" id="yt9-07-T98"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="full">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fullscreenButton:" destination="JQq-OS-7dI" eventType="touchUpInside" id="DtW-WI-Wg5"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvN-oZ-aAe">
-                                        <rect key="frame" x="317" y="205" width="50" height="0.0"/>
+                                        <rect key="frame" x="281" y="205" width="50" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="B5f-po-q7A"/>
                                             <constraint firstAttribute="height" constant="60" id="WnW-dB-b1D"/>
                                             <constraint firstAttribute="width" constant="132" id="baf-gX-fbg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -375,7 +393,7 @@
                                             <constraint firstAttribute="width" constant="132" id="EMH-fc-NE7"/>
                                             <constraint firstAttribute="height" constant="60" id="l6h-fm-AxH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -431,7 +449,7 @@
                                             <constraint firstAttribute="height" constant="24" id="iOg-cN-I8S"/>
                                             <constraint firstAttribute="width" constant="24" id="vMl-8j-ig9"/>
                                         </constraints>
-                                        <state key="normal" image="back_white"/>
+                                        <state key="normal" image="close_white"/>
                                         <connections>
                                             <action selector="Back_Button:" destination="JQq-OS-7dI" eventType="touchUpInside" id="sW7-1Z-RLp"/>
                                         </connections>
@@ -444,13 +462,13 @@
                                         <color key="thumbTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxN-4X-AoN">
-                                        <rect key="frame" x="318.5" y="60.5" width="30" height="21.5"/>
+                                        <rect key="frame" x="318.5" y="49.5" width="30" height="21.5"/>
                                         <fontDescription key="fontDescription" name="Sukar-Bold" family="Sukar" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3m-cZ-4tt">
-                                        <rect key="frame" x="24" y="51" width="40" height="40"/>
+                                        <rect key="frame" x="24" y="40" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="DyF-Oe-OC0"/>
                                             <constraint firstAttribute="height" constant="40" id="YKk-uT-BmB"/>
@@ -512,9 +530,6 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="As7-4D-KNW" firstAttribute="centerX" secondItem="TBD-Qc-mRF" secondAttribute="centerX" id="XOT-ED-f61"/>
-                                    <constraint firstAttribute="trailing" secondItem="gvN-oZ-aAe" secondAttribute="trailing" constant="24" id="YBD-DV-DHv">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="8"/>
-                                    </constraint>
                                     <constraint firstItem="Byv-1p-egv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JxN-4X-AoN" secondAttribute="trailing" constant="20" id="b3a-b3-hjU">
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
@@ -522,8 +537,11 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="7gC-cu-bBU" firstAttribute="centerY" secondItem="As7-4D-KNW" secondAttribute="centerY" id="dDK-qJ-7Ia"/>
-                                    <constraint firstAttribute="trailing" secondItem="gvN-oZ-aAe" secondAttribute="trailing" constant="8" id="fOR-cv-6oa"/>
+                                    <constraint firstAttribute="trailing" secondItem="gvN-oZ-aAe" secondAttribute="trailing" constant="8" id="fOR-cv-6oa">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="44"/>
+                                    </constraint>
                                     <constraint firstItem="WGc-ne-0EY" firstAttribute="leading" secondItem="As7-4D-KNW" secondAttribute="trailing" constant="140" id="fUl-C0-tWh"/>
+                                    <constraint firstAttribute="trailing" secondItem="pzl-6d-b0t" secondAttribute="trailing" constant="8" id="fw0-X0-ALf"/>
                                     <constraint firstAttribute="trailing" secondItem="5P5-et-b1h" secondAttribute="trailing" id="gfW-FF-LBT"/>
                                     <constraint firstAttribute="height" constant="200" id="h9R-37-d67">
                                         <variation key="heightClass=regular-widthClass=compact" constant="240"/>
@@ -535,6 +553,7 @@
                                     <constraint firstAttribute="bottom" secondItem="f0r-7e-FkU" secondAttribute="bottom" constant="1" id="iqr-bn-V1W">
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
+                                    <constraint firstItem="pzl-6d-b0t" firstAttribute="centerY" secondItem="gvN-oZ-aAe" secondAttribute="centerY" id="jFg-N6-bcy"/>
                                     <constraint firstItem="As7-4D-KNW" firstAttribute="centerX" secondItem="TBD-Qc-mRF" secondAttribute="centerX" id="jf2-8m-P47"/>
                                     <constraint firstAttribute="trailing" secondItem="f0r-7e-FkU" secondAttribute="trailing" constant="1" id="lJf-8W-hXh">
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -555,6 +574,7 @@
                                     <constraint firstAttribute="bottom" secondItem="c9g-dB-GMn" secondAttribute="bottom" constant="24" id="x5G-um-uy7"/>
                                     <constraint firstItem="As7-4D-KNW" firstAttribute="centerY" secondItem="TBD-Qc-mRF" secondAttribute="centerY" id="xFs-YZ-0Hn"/>
                                     <constraint firstItem="f0r-7e-FkU" firstAttribute="leading" secondItem="c9g-dB-GMn" secondAttribute="trailing" constant="8" id="xsG-Q0-MHL"/>
+                                    <constraint firstAttribute="trailing" secondItem="gvN-oZ-aAe" secondAttribute="trailing" constant="44" id="yrl-9y-Pzy"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -589,7 +609,6 @@
                                         <exclude reference="ocZ-I3-9Fn"/>
                                         <exclude reference="b3a-b3-hjU"/>
                                         <exclude reference="CJO-dk-f60"/>
-                                        <exclude reference="YBD-DV-DHv"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -645,7 +664,6 @@
                                         <exclude reference="52J-fc-SfT"/>
                                         <exclude reference="8jH-Me-dxV"/>
                                         <exclude reference="CJO-dk-f60"/>
-                                        <include reference="YBD-DV-DHv"/>
                                         <exclude reference="fOR-cv-6oa"/>
                                     </mask>
                                 </variation>
@@ -916,16 +934,36 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-76" y="-657.12143928035982"/>
+            <point key="canvasLocation" x="863.20000000000005" y="-657.12143928035982"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="Jrr-T8-Btb">
+            <objects>
+                <navigationController storyboardIdentifier="AnimeDetails" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8y6-gs-oJs" customClass="BaseNavigationController" customModule="Donia_Atfal" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KHi-HW-gZf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o7n-1m-9vX" kind="relationship" relationship="rootViewController" id="2s9-HP-qBk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqk-y7-L3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778.39999999999998" y="-282.00899550224892"/>
         </scene>
     </scenes>
     <resources>
         <image name="back_white" width="24" height="24"/>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
+        <image name="close_white" width="24" height="24"/>
         <image name="conan" width="256" height="144"/>
         <image name="favorite_border_white" width="24" height="24"/>
         <image name="favorite_dim" width="24" height="24"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
+        <image name="full" width="12" height="12"/>
         <image name="pause_white" width="72" height="72"/>
     </resources>
 </document>

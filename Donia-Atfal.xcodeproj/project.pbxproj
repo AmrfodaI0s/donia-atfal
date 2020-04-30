@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		284296BC3654BC8CF808714E /* Pods_Cool_Kids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1EA995DD07BD2C293DA102 /* Pods_Cool_Kids.framework */; };
+		AA29382C24544877001D4E24 /* BaseNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29382B24544877001D4E24 /* BaseNC.swift */; };
+		AA29382E24544EB8001D4E24 /* ZoomingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29382D24544EB8001D4E24 /* ZoomingDelegate.swift */; };
+		AA29383A24548560001D4E24 /* AnimeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA29383924548560001D4E24 /* AnimeDetails.storyboard */; };
 		AA44FE7D242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44FE7C242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift */; };
 		AA44FE822429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44FE802429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift */; };
 		AA44FE832429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA44FE812429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib */; };
@@ -50,7 +53,6 @@
 		EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F464123FD419100B00A2B /* SliderCollectionViewCell.swift */; };
 		EF0F464423FD419100B00A2B /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0F464223FD419100B00A2B /* SliderCollectionViewCell.xib */; };
 		EF0F464623FD844B00B00A2B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F464523FD844B00B00A2B /* Helper.swift */; };
-		EF1F2A1224224E2A00D2ACB5 /* AnimeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1F2A1124224E2900D2ACB5 /* AnimeDetails.storyboard */; };
 		EF1F2A1524224EE200D2ACB5 /* AnimeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */; };
 		EF71F72F23F16362007BE84D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F72E23F16362007BE84D /* AppDelegate.swift */; };
 		EF71F73123F16362007BE84D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71F73023F16362007BE84D /* SceneDelegate.swift */; };
@@ -78,6 +80,9 @@
 		0DADA9B38D155914B1EED269 /* Pods-Cool Kids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool Kids.release.xcconfig"; path = "Target Support Files/Pods-Cool Kids/Pods-Cool Kids.release.xcconfig"; sourceTree = "<group>"; };
 		0F1EA995DD07BD2C293DA102 /* Pods_Cool_Kids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cool_Kids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61392BCBD3AB9299CA377130 /* Pods-Cool Kids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cool Kids.debug.xcconfig"; path = "Target Support Files/Pods-Cool Kids/Pods-Cool Kids.debug.xcconfig"; sourceTree = "<group>"; };
+		AA29382B24544877001D4E24 /* BaseNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNC.swift; sourceTree = "<group>"; };
+		AA29382D24544EB8001D4E24 /* ZoomingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomingDelegate.swift; sourceTree = "<group>"; };
+		AA29383924548560001D4E24 /* AnimeDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnimeDetails.storyboard; sourceTree = "<group>"; };
 		AA44FE7C242965A000CBCAB2 /* AnimeDetailsVC + Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimeDetailsVC + Collection.swift"; sourceTree = "<group>"; };
 		AA44FE802429683200CBCAB2 /* AnimeDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA44FE812429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimeDetailsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -120,7 +125,6 @@
 		EF0F464123FD419100B00A2B /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF0F464223FD419100B00A2B /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF0F464523FD844B00B00A2B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		EF1F2A1124224E2900D2ACB5 /* AnimeDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimeDetails.storyboard; sourceTree = "<group>"; };
 		EF1F2A1424224EE200D2ACB5 /* AnimeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailsVC.swift; sourceTree = "<group>"; };
 		EF71F72B23F16362007BE84D /* Donia-Atfal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donia-Atfal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF71F72E23F16362007BE84D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 				EF71F73223F16362007BE84D /* MainVC.swift */,
 				AAD1C4D62441A94B00B715FF /* MainVC + Animations.swift */,
 				AAE4027B23F3563600489F84 /* TabBarVC.swift */,
+				AA29382B24544877001D4E24 /* BaseNC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				AAD1A1FA24309D27006320C0 /* BaseView.swift */,
 				AAE52F2A243A313600F3F604 /* GradientView.swift */,
 				AAD1C4CE2441594F00B715FF /* CustomView.swift */,
+				AA29382D24544EB8001D4E24 /* ZoomingDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -452,7 +458,7 @@
 				EFB6340E241F830800E04818 /* SuperVC.storyboard */,
 				EFB63415241F854700E04818 /* FavoriteVC.storyboard */,
 				EFB63417241F85F000E04818 /* SettingsVC.storyboard */,
-				EF1F2A1124224E2900D2ACB5 /* AnimeDetails.storyboard */,
+				AA29383924548560001D4E24 /* AnimeDetails.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -617,9 +623,9 @@
 				EF71F73623F16362007BE84D /* Main.storyboard in Resources */,
 				AAD1C4D4244185AD00B715FF /* Darktheme.xcassets in Resources */,
 				AAE64D7624402DF50073D156 /* box.json in Resources */,
+				AA29383A24548560001D4E24 /* AnimeDetails.storyboard in Resources */,
 				EF0F464423FD419100B00A2B /* SliderCollectionViewCell.xib in Resources */,
 				EFB63418241F85F000E04818 /* SettingsVC.storyboard in Resources */,
-				EF1F2A1224224E2A00D2ACB5 /* AnimeDetails.storyboard in Resources */,
 				AA44FE832429683200CBCAB2 /* AnimeDetailsCollectionViewCell.xib in Resources */,
 				EFB6340F241F830800E04818 /* SuperVC.storyboard in Resources */,
 				AAE64D742440134E0073D156 /* bus.json in Resources */,
@@ -678,6 +684,7 @@
 				AAC040BB2445CDF100E82A81 /* AnimeDetailsVC + Layout.swift in Sources */,
 				AAC975CA2444E876007C5C6F /* VideoVC + CollectionView.swift in Sources */,
 				EF71F73323F16362007BE84D /* MainVC.swift in Sources */,
+				AA29382C24544877001D4E24 /* BaseNC.swift in Sources */,
 				AAC040C424469B2300E82A81 /* PanGesture + State.swift in Sources */,
 				EF0F464323FD419100B00A2B /* SliderCollectionViewCell.swift in Sources */,
 				EFD9F43224211C9F00D1C686 /* ContentCollectionViewCell.swift in Sources */,
@@ -720,6 +727,7 @@
 				AAC040CE2446B59F00E82A81 /* VideoVC + Cells.swift in Sources */,
 				AAE52F27243A050300F3F604 /* Constants.swift in Sources */,
 				AAD1C4D72441A94B00B715FF /* MainVC + Animations.swift in Sources */,
+				AA29382E24544EB8001D4E24 /* ZoomingDelegate.swift in Sources */,
 				AAD1C4CA24411B1800B715FF /* Dark_Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

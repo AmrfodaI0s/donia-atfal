@@ -11,6 +11,7 @@ import UIKit
 class AnimeDetailsVC: UIViewController {
     
     @IBOutlet weak var anime: AnimeDetailsView!
+    var selectedIndexPath: IndexPath!
     var selected_anime : Category?
     var videos: Videos?
     var related_videos: Videos?
